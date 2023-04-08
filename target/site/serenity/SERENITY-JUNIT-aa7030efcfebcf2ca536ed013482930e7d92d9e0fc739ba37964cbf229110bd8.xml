@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="1" failures="0" name="Yavlena Broker List" skipped="0" tests="1" time="0.41" timestamp="2023-04-08 03:27:18"><testcase name="As a user of Yavlena, Mason wants to see a list of all the brokers"><error message="Cannot invoke &quot;Object.equals(Object)&quot; because the return value of &quot;org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])&quot; is null" type="java.lang.NullPointerException">Cannot invoke "Object.equals(Object)" because the return value of "org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])" is null</error><system-err>Cannot invoke "Object.equals(Object)" because the return value of "org.openqa.selenium.JavascriptExecutor.executeScript(String, Object[])" is null
+starter.utils.AbstractStepDefinitions.lambda$waitForPageLoad$0(AbstractStepDefinitions.java:32)
+starter.utils.AbstractStepDefinitions.waitForPageLoad(AbstractStepDefinitions.java:32)
+starter.stepdefinitions.yavlena.YavlenaHomePageStepDefinitions.actorIsAUserOfYavlenaServices(YavlenaHomePageStepDefinitions.java:25)
+✽.Mason is a user of Yavlena services(file:///home/kage/P_Projects/serenity-cucumber-starter/src/test/resources/features/Yavlena.feature:10)
+</system-err></testcase></testsuite>
