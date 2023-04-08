@@ -1,0 +1,1262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Frakton QAA Task</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="3d015553b08bc37e8590b423208959ae89fcbe9a90f1e5dc52dc750ef40f288e.html">Yavlena Broker List</a></span>
+                > <span class="truncate-60"><a
+                    href="d5aa13615b8ebfb9b607137d892ee5aba94691bc17effa8a9e90ac1aab4ad0db.html">As a user of Yavlena, Brad wants to search all the brokers in the system </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 08-04-2023 18:17</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Yavlena Broker List </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="0afb930406e47cd27fc7d3ed872184c40ad55ac6d47f2bffa20a003ae59c219d.html">Yavlena UI 03
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="a0b6d304d97bdb4c47da040e4d91c2f65df1cc8529dc367d9b7d8be84b5dfab6.html">UI
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="4df2a0cb43ac9cacc5d3678afdf705c621abb9a2338e2daa1d3899f87f5b996c.html">Linux
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="6fe0671aeea9e76b6998ee682216d11c7748a4152740df0586f3c256ecb3f5da.html">Chrome
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="608871a40e467c8ade9e152740779af37f069c0d9cb251c1d078c17be0e28d1c.html">Yavlena
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="9cf03a0da4cbb6e42597277eafda663fb0ce73686848250ca944ed809207ce66.html">Positive Path
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="46b54d9084ba9783130da16408afb27a4e4620f6bd966e731510c7395b9ddf5c.html">Chrome, Linux
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="fced59f5a784d72c644095b5c019cdd15b8d41cf4f6c680f248995f8156291b2.html">UI
+                                        (Yavlena)
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="e51fac53ca6d4bd2be7014480617f642171f85701fee5677f22ef67a19f23113.html">Automated
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">As a user of Yavlena, Brad wants to search all the brokers in the system
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="32c389e868ce67ef78b18d212aafb4fb97cac07bbd28287f0b22ad05360e555c.png" title=" Given Brad is a user of Yavlena services" width="1876"/>
+                <img src="32c389e868ce67ef78b18d212aafb4fb97cac07bbd28287f0b22ad05360e555c.png" title=" Brad opens Yavlena Broker page" width="1876"/>
+                <img src="32c389e868ce67ef78b18d212aafb4fb97cac07bbd28287f0b22ad05360e555c.png" title=" Brad opens the Yavlena home page" width="1876"/>
+                <img src="eb98f59dd8cd355457bc0fa33b21fd44c6a8cfe1f00170c65f7bc26b243c4f3f.png" title=" Brad opens the Yavlena home page (completed)" width="1876"/>
+                <img src="eb98f59dd8cd355457bc0fa33b21fd44c6a8cfe1f00170c65f7bc26b243c4f3f.png" title=" Brad opens Yavlena Broker page (completed)" width="1876"/>
+                <img src="eb98f59dd8cd355457bc0fa33b21fd44c6a8cfe1f00170c65f7bc26b243c4f3f.png" title=" Brad should see a value that is true" width="1876"/>
+                <img src="2586ddf8d269a484a9e2842e4016030fa7e72d6e599ae3dfddcfcd9621d399f8.png" title=" Given Brad is a user of Yavlena services (completed)" width="1876"/>
+                <img src="2db4a4f8df5682dbb926d9a02f9e1fcb62b74c2204188b4c633cb72f360d4b5a.png" title=" When He searches every broker in the system" width="1876"/>
+                <img src="2db4a4f8df5682dbb926d9a02f9e1fcb62b74c2204188b4c633cb72f360d4b5a.png" title=" He clicks on YavlenaHomePage.loadMoreBrokersButton" width="1876"/>
+                <img src="7044375fd5d725ae6ad0979d8e552c0c9827471899ceae673a709c5621ef21e1.png" title=" He clicks on YavlenaHomePage.loadMoreBrokersButton (completed)" width="1876"/>
+                <img src="7044375fd5d725ae6ad0979d8e552c0c9827471899ceae673a709c5621ef21e1.png" title=" He should see a value that is true" width="1876"/>
+                <img src="47c5217a79ae8a1cd25b92e1ed81996f50eb99c4c2af4e0425ff3f5f0612d515.png" title=" He should see a value that is true" width="1876"/>
+                <img src="47c5217a79ae8a1cd25b92e1ed81996f50eb99c4c2af4e0425ff3f5f0612d515.png" title=" He should see a value that is equal to: &lt;102&gt;" width="1876"/>
+                <img src="47c5217a79ae8a1cd25b92e1ed81996f50eb99c4c2af4e0425ff3f5f0612d515.png" title=" He enters 'Александър Андреев' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="58188677f26b83f81672aa3d8b246e2a21d53a0c422c5e637d3d19c63a75321f.png" title=" He enters 'Александър Андреев' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="b0e2c35bd2237c4f6d89ed5f5b8c901b53d4c4627195716cabebe6f29b3b4433.png" title=" He should see a value that is true" width="1876"/>
+                <img src="b0e2c35bd2237c4f6d89ed5f5b8c901b53d4c4627195716cabebe6f29b3b4433.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="b0e2c35bd2237c4f6d89ed5f5b8c901b53d4c4627195716cabebe6f29b3b4433.png" title=" He should see a value that is equal to: &lt;&quot;Александър Андреев&quot;&gt;" width="1876"/>
+                <img src="b0e2c35bd2237c4f6d89ed5f5b8c901b53d4c4627195716cabebe6f29b3b4433.png" title=" He should see a value that is true" width="1876"/>
+                <img src="b0e2c35bd2237c4f6d89ed5f5b8c901b53d4c4627195716cabebe6f29b3b4433.png" title=" He should see a value that is true" width="1876"/>
+                <img src="b0e2c35bd2237c4f6d89ed5f5b8c901b53d4c4627195716cabebe6f29b3b4433.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="b0e2c35bd2237c4f6d89ed5f5b8c901b53d4c4627195716cabebe6f29b3b4433.png" title=" He should see a value that is true" width="1876"/>
+                <img src="b0e2c35bd2237c4f6d89ed5f5b8c901b53d4c4627195716cabebe6f29b3b4433.png" title=" He enters 'Александър Петков' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="4673835374593e932baa88a569def1e52d43e63348ef52c03a43cd371dca8739.png" title=" He enters 'Александър Петков' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="24bc7a4a3d9cf5735daab985217fc97c35c445d8da668865c94c2abd095c7d25.png" title=" He should see a value that is true" width="1876"/>
+                <img src="24bc7a4a3d9cf5735daab985217fc97c35c445d8da668865c94c2abd095c7d25.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="24bc7a4a3d9cf5735daab985217fc97c35c445d8da668865c94c2abd095c7d25.png" title=" He should see a value that is equal to: &lt;&quot;Александър Петков&quot;&gt;" width="1876"/>
+                <img src="24bc7a4a3d9cf5735daab985217fc97c35c445d8da668865c94c2abd095c7d25.png" title=" He should see a value that is true" width="1876"/>
+                <img src="83088dc23bf6a87e5202f2c8c3f9580710ff7261997de5972ab6f9f26bcb442f.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="83088dc23bf6a87e5202f2c8c3f9580710ff7261997de5972ab6f9f26bcb442f.png" title=" He should see a value that is true" width="1876"/>
+                <img src="83088dc23bf6a87e5202f2c8c3f9580710ff7261997de5972ab6f9f26bcb442f.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="83088dc23bf6a87e5202f2c8c3f9580710ff7261997de5972ab6f9f26bcb442f.png" title=" He should see a value that is true" width="1876"/>
+                <img src="83088dc23bf6a87e5202f2c8c3f9580710ff7261997de5972ab6f9f26bcb442f.png" title=" He enters 'Анас Хамид' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="8a6951fee2d0320c7c08c7ab97b0f7511b31dea00177b6702aa38e355a9cdd28.png" title=" He enters 'Анас Хамид' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="7ee94804c7148f2cf23cf2f078e3d3dce512670b03dba6f72ea5d5987e45f32a.png" title=" He should see a value that is true" width="1876"/>
+                <img src="7ee94804c7148f2cf23cf2f078e3d3dce512670b03dba6f72ea5d5987e45f32a.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="7ee94804c7148f2cf23cf2f078e3d3dce512670b03dba6f72ea5d5987e45f32a.png" title=" He should see a value that is equal to: &lt;&quot;Анас Хамид&quot;&gt;" width="1876"/>
+                <img src="7ee94804c7148f2cf23cf2f078e3d3dce512670b03dba6f72ea5d5987e45f32a.png" title=" He should see a value that is true" width="1876"/>
+                <img src="5d656b5ebc6aa2060d5c1a038a1ae8e8b989ae0384862985045de37fdb656a3d.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="5d656b5ebc6aa2060d5c1a038a1ae8e8b989ae0384862985045de37fdb656a3d.png" title=" He should see a value that is true" width="1876"/>
+                <img src="5d656b5ebc6aa2060d5c1a038a1ae8e8b989ae0384862985045de37fdb656a3d.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="5d656b5ebc6aa2060d5c1a038a1ae8e8b989ae0384862985045de37fdb656a3d.png" title=" He should see a value that is true" width="1876"/>
+                <img src="5d656b5ebc6aa2060d5c1a038a1ae8e8b989ae0384862985045de37fdb656a3d.png" title=" He enters 'Анна Пейчева' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="6c058b655f8f23ecc5ec3bd66cdd43fb37978b66698e46c83bd3720703c6b29d.png" title=" He enters 'Анна Пейчева' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="ba802e32b14b17927f785811c5ecc7ec6d543d9306da120bbb3be3cad1da9e22.png" title=" He should see a value that is true" width="1876"/>
+                <img src="ba802e32b14b17927f785811c5ecc7ec6d543d9306da120bbb3be3cad1da9e22.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="ba802e32b14b17927f785811c5ecc7ec6d543d9306da120bbb3be3cad1da9e22.png" title=" He should see a value that is equal to: &lt;&quot;Анна Пейчева&quot;&gt;" width="1876"/>
+                <img src="ba802e32b14b17927f785811c5ecc7ec6d543d9306da120bbb3be3cad1da9e22.png" title=" He should see a value that is true" width="1876"/>
+                <img src="ba802e32b14b17927f785811c5ecc7ec6d543d9306da120bbb3be3cad1da9e22.png" title=" He should see a value that is true" width="1876"/>
+                <img src="ba802e32b14b17927f785811c5ecc7ec6d543d9306da120bbb3be3cad1da9e22.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="ba802e32b14b17927f785811c5ecc7ec6d543d9306da120bbb3be3cad1da9e22.png" title=" He should see a value that is true" width="1876"/>
+                <img src="ba802e32b14b17927f785811c5ecc7ec6d543d9306da120bbb3be3cad1da9e22.png" title=" He enters 'Анна Яръмова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="4cc53c6f837e541551aadec138f446f5fe47308ca6fa51e49d6a7fd2dc962308.png" title=" He enters 'Анна Яръмова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="3745e2ebe30f901133d9263f9d5df5e54c2cfe9293f91b6c2b0462ea7dedcc6d.png" title=" He should see a value that is true" width="1876"/>
+                <img src="3745e2ebe30f901133d9263f9d5df5e54c2cfe9293f91b6c2b0462ea7dedcc6d.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="3745e2ebe30f901133d9263f9d5df5e54c2cfe9293f91b6c2b0462ea7dedcc6d.png" title=" He should see a value that is equal to: &lt;&quot;Анна Яръмова&quot;&gt;" width="1876"/>
+                <img src="3745e2ebe30f901133d9263f9d5df5e54c2cfe9293f91b6c2b0462ea7dedcc6d.png" title=" He should see a value that is true" width="1876"/>
+                <img src="5c88306f0eacdbf718eab98b074b79065eda16fa503a5b918f8ffbd4ed98793a.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="5c88306f0eacdbf718eab98b074b79065eda16fa503a5b918f8ffbd4ed98793a.png" title=" He should see a value that is true" width="1876"/>
+                <img src="5c88306f0eacdbf718eab98b074b79065eda16fa503a5b918f8ffbd4ed98793a.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="5c88306f0eacdbf718eab98b074b79065eda16fa503a5b918f8ffbd4ed98793a.png" title=" He should see a value that is true" width="1876"/>
+                <img src="5c88306f0eacdbf718eab98b074b79065eda16fa503a5b918f8ffbd4ed98793a.png" title=" He enters 'Антония Спасова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="74fb74a76731e67e5205f4c74a73d680847ab89d8cdae0fb7936c97842c203be.png" title=" He enters 'Антония Спасова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="ad862b390de9aebe38521840ae03cad1cbedceb90bec60b3d0e90411a76b2cb0.png" title=" He should see a value that is true" width="1876"/>
+                <img src="ad862b390de9aebe38521840ae03cad1cbedceb90bec60b3d0e90411a76b2cb0.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="ad862b390de9aebe38521840ae03cad1cbedceb90bec60b3d0e90411a76b2cb0.png" title=" He should see a value that is equal to: &lt;&quot;Антония Спасова&quot;&gt;" width="1876"/>
+                <img src="ad862b390de9aebe38521840ae03cad1cbedceb90bec60b3d0e90411a76b2cb0.png" title=" He should see a value that is true" width="1876"/>
+                <img src="f6c62497342aef1a0b4e76199353acf6568b690d5d528ab3fb6b6fb76d389bcd.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="f6c62497342aef1a0b4e76199353acf6568b690d5d528ab3fb6b6fb76d389bcd.png" title=" He should see a value that is true" width="1876"/>
+                <img src="f6c62497342aef1a0b4e76199353acf6568b690d5d528ab3fb6b6fb76d389bcd.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="f6c62497342aef1a0b4e76199353acf6568b690d5d528ab3fb6b6fb76d389bcd.png" title=" He should see a value that is true" width="1876"/>
+                <img src="f6c62497342aef1a0b4e76199353acf6568b690d5d528ab3fb6b6fb76d389bcd.png" title=" He enters 'Биляна Маркова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="a6e861d2afb6df86e719b3cca1cca74ea12324dcc52679cad0a499849fa51d47.png" title=" He enters 'Биляна Маркова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="a39082b0daa7b976c882c07f9fbca5a24fb9e9bf64ed79642206e67377073951.png" title=" He should see a value that is true" width="1876"/>
+                <img src="a39082b0daa7b976c882c07f9fbca5a24fb9e9bf64ed79642206e67377073951.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="a39082b0daa7b976c882c07f9fbca5a24fb9e9bf64ed79642206e67377073951.png" title=" He should see a value that is equal to: &lt;&quot;Биляна Маркова&quot;&gt;" width="1876"/>
+                <img src="a39082b0daa7b976c882c07f9fbca5a24fb9e9bf64ed79642206e67377073951.png" title=" He should see a value that is true" width="1876"/>
+                <img src="a39082b0daa7b976c882c07f9fbca5a24fb9e9bf64ed79642206e67377073951.png" title=" He should see a value that is true" width="1876"/>
+                <img src="a39082b0daa7b976c882c07f9fbca5a24fb9e9bf64ed79642206e67377073951.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="a39082b0daa7b976c882c07f9fbca5a24fb9e9bf64ed79642206e67377073951.png" title=" He should see a value that is true" width="1876"/>
+                <img src="a39082b0daa7b976c882c07f9fbca5a24fb9e9bf64ed79642206e67377073951.png" title=" He enters 'Богдан Стефанов' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="f864baa002329d6993806300c4648fc7e61cdb044eec8488b2ac9c3b36d7a2d3.png" title=" He enters 'Богдан Стефанов' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="e46cb1feee02cfdeb2a86b3ccd5e9a5de02ca8c7a0de38d755c37c588e6cca55.png" title=" He should see a value that is true" width="1876"/>
+                <img src="e46cb1feee02cfdeb2a86b3ccd5e9a5de02ca8c7a0de38d755c37c588e6cca55.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="e46cb1feee02cfdeb2a86b3ccd5e9a5de02ca8c7a0de38d755c37c588e6cca55.png" title=" He should see a value that is equal to: &lt;&quot;Богдан Стефанов&quot;&gt;" width="1876"/>
+                <img src="e46cb1feee02cfdeb2a86b3ccd5e9a5de02ca8c7a0de38d755c37c588e6cca55.png" title=" He should see a value that is true" width="1876"/>
+                <img src="b092672c39e15b2ad7dd13a8ce12bb5f9cc0bc0777779e08c8f6f98f313727cd.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="b092672c39e15b2ad7dd13a8ce12bb5f9cc0bc0777779e08c8f6f98f313727cd.png" title=" He should see a value that is true" width="1876"/>
+                <img src="b092672c39e15b2ad7dd13a8ce12bb5f9cc0bc0777779e08c8f6f98f313727cd.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="b092672c39e15b2ad7dd13a8ce12bb5f9cc0bc0777779e08c8f6f98f313727cd.png" title=" He should see a value that is true" width="1876"/>
+                <img src="b092672c39e15b2ad7dd13a8ce12bb5f9cc0bc0777779e08c8f6f98f313727cd.png" title=" He enters 'Божидар Делчев' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="4d1b2b2ce9a8e3fdfdb1262c1c81e94cf624f079896f108379cd9e8b868a57ba.png" title=" He enters 'Божидар Делчев' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="a6d5c58ad5723b0a44ab907660d49cdcc89e67736775a886bd8070241fbf14bc.png" title=" He should see a value that is true" width="1876"/>
+                <img src="a6d5c58ad5723b0a44ab907660d49cdcc89e67736775a886bd8070241fbf14bc.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="a6d5c58ad5723b0a44ab907660d49cdcc89e67736775a886bd8070241fbf14bc.png" title=" He should see a value that is equal to: &lt;&quot;Божидар Делчев&quot;&gt;" width="1876"/>
+                <img src="250190201ead05e39a61aaaed8e30dcf12aebc4c4c7d790e09c05c590423d352.png" title=" He should see a value that is equal to: &lt;&quot;Божидар Делчев&quot;&gt; (completed)" width="1876"/>
+                <img src="250190201ead05e39a61aaaed8e30dcf12aebc4c4c7d790e09c05c590423d352.png" title=" He should see a value that is true" width="1876"/>
+                <img src="250190201ead05e39a61aaaed8e30dcf12aebc4c4c7d790e09c05c590423d352.png" title=" He should see a value that is true" width="1876"/>
+                <img src="250190201ead05e39a61aaaed8e30dcf12aebc4c4c7d790e09c05c590423d352.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="250190201ead05e39a61aaaed8e30dcf12aebc4c4c7d790e09c05c590423d352.png" title=" He should see a value that is true" width="1876"/>
+                <img src="250190201ead05e39a61aaaed8e30dcf12aebc4c4c7d790e09c05c590423d352.png" title=" He enters 'Бойка Николова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="060837f64a46296b3c38bf5beab95b13673cfee95e6b308842f9c0fbdcce4c29.png" title=" He enters 'Бойка Николова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="940bba337fa58680619212989572c9156aad0c1ab82f1082464db5175c1896aa.png" title=" He should see a value that is true" width="1876"/>
+                <img src="940bba337fa58680619212989572c9156aad0c1ab82f1082464db5175c1896aa.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="940bba337fa58680619212989572c9156aad0c1ab82f1082464db5175c1896aa.png" title=" He should see a value that is equal to: &lt;&quot;Бойка Николова&quot;&gt;" width="1876"/>
+                <img src="940bba337fa58680619212989572c9156aad0c1ab82f1082464db5175c1896aa.png" title=" He should see a value that is true" width="1876"/>
+                <img src="7c541dba66ffd1b522e1bbc226f8ce043e6865f10ca4c31da474bc898789af74.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="7c541dba66ffd1b522e1bbc226f8ce043e6865f10ca4c31da474bc898789af74.png" title=" He should see a value that is true" width="1876"/>
+                <img src="7c541dba66ffd1b522e1bbc226f8ce043e6865f10ca4c31da474bc898789af74.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="7c541dba66ffd1b522e1bbc226f8ce043e6865f10ca4c31da474bc898789af74.png" title=" He should see a value that is true" width="1876"/>
+                <img src="7c541dba66ffd1b522e1bbc226f8ce043e6865f10ca4c31da474bc898789af74.png" title=" He enters 'Борис Колев' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="3a297fedc514f770c7cd7aa773bbbad0f74e9aea2610b9a0174ce1200934d5f9.png" title=" He enters 'Борис Колев' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="d325173aed365edb1668b0c3e15fc009a934675aa7360aa017b2d223fb94fe3a.png" title=" He should see a value that is true" width="1876"/>
+                <img src="d325173aed365edb1668b0c3e15fc009a934675aa7360aa017b2d223fb94fe3a.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="d325173aed365edb1668b0c3e15fc009a934675aa7360aa017b2d223fb94fe3a.png" title=" He should see a value that is equal to: &lt;&quot;Борис Колев&quot;&gt;" width="1876"/>
+                <img src="d325173aed365edb1668b0c3e15fc009a934675aa7360aa017b2d223fb94fe3a.png" title=" He should see a value that is true" width="1876"/>
+                <img src="da927d5c0e466de13863a12b28590d4acc3e2c7ca55d83eb66d70c1fcaddf62d.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="da927d5c0e466de13863a12b28590d4acc3e2c7ca55d83eb66d70c1fcaddf62d.png" title=" He should see a value that is true" width="1876"/>
+                <img src="da927d5c0e466de13863a12b28590d4acc3e2c7ca55d83eb66d70c1fcaddf62d.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="da927d5c0e466de13863a12b28590d4acc3e2c7ca55d83eb66d70c1fcaddf62d.png" title=" He should see a value that is true" width="1876"/>
+                <img src="da927d5c0e466de13863a12b28590d4acc3e2c7ca55d83eb66d70c1fcaddf62d.png" title=" He enters 'Боян Михайлов' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="1d697da934d647e1264e9216d40df01af9a28fa1945062c74a3af85f6365e88f.png" title=" He enters 'Боян Михайлов' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="cf88960739043a162cd1135a105b766933319bf286a532cad6065c48869d9e5a.png" title=" He should see a value that is true" width="1876"/>
+                <img src="cf88960739043a162cd1135a105b766933319bf286a532cad6065c48869d9e5a.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="cf88960739043a162cd1135a105b766933319bf286a532cad6065c48869d9e5a.png" title=" He should see a value that is equal to: &lt;&quot;Боян Михайлов&quot;&gt;" width="1876"/>
+                <img src="cf88960739043a162cd1135a105b766933319bf286a532cad6065c48869d9e5a.png" title=" He should see a value that is true" width="1876"/>
+                <img src="cf88960739043a162cd1135a105b766933319bf286a532cad6065c48869d9e5a.png" title=" He should see a value that is true" width="1876"/>
+                <img src="cf88960739043a162cd1135a105b766933319bf286a532cad6065c48869d9e5a.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="cf88960739043a162cd1135a105b766933319bf286a532cad6065c48869d9e5a.png" title=" He should see a value that is true" width="1876"/>
+                <img src="cf88960739043a162cd1135a105b766933319bf286a532cad6065c48869d9e5a.png" title=" He enters 'Боян Начев' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="c658c5505922eb0d6ace2d12924ecc0534354ffaaa8d81e0f8004afefd7287c1.png" title=" He enters 'Боян Начев' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="fbbdc9bc7045a466836db166dd65321ebba3f6d8bb9f131f7632e03e496125ed.png" title=" He should see a value that is true" width="1876"/>
+                <img src="fbbdc9bc7045a466836db166dd65321ebba3f6d8bb9f131f7632e03e496125ed.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="fbbdc9bc7045a466836db166dd65321ebba3f6d8bb9f131f7632e03e496125ed.png" title=" He should see a value that is equal to: &lt;&quot;Боян Начев&quot;&gt;" width="1876"/>
+                <img src="fbbdc9bc7045a466836db166dd65321ebba3f6d8bb9f131f7632e03e496125ed.png" title=" He should see a value that is true" width="1876"/>
+                <img src="34980d69fb231fa90d165d74f1f88547495c09e977711d4c3820af6799eb6371.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="34980d69fb231fa90d165d74f1f88547495c09e977711d4c3820af6799eb6371.png" title=" He should see a value that is true" width="1876"/>
+                <img src="34980d69fb231fa90d165d74f1f88547495c09e977711d4c3820af6799eb6371.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="34980d69fb231fa90d165d74f1f88547495c09e977711d4c3820af6799eb6371.png" title=" He should see a value that is true" width="1876"/>
+                <img src="34980d69fb231fa90d165d74f1f88547495c09e977711d4c3820af6799eb6371.png" title=" He enters 'Валери Петрунова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="30fe697a528b859bb9d1bd02ea5e6fc9057230c15cf6a3488cf6a34639c78755.png" title=" He enters 'Валери Петрунова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="627f20acf7c14c1d213c86b9a98269fcc4749a1f98166014af983df914e903db.png" title=" He should see a value that is true" width="1876"/>
+                <img src="627f20acf7c14c1d213c86b9a98269fcc4749a1f98166014af983df914e903db.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="627f20acf7c14c1d213c86b9a98269fcc4749a1f98166014af983df914e903db.png" title=" He should see a value that is equal to: &lt;&quot;Валери Петрунова&quot;&gt;" width="1876"/>
+                <img src="284c569ee0622dfd404b82f6e3776ac6eca0a4bf45ac5b823436a51c99dadb28.png" title=" He should see a value that is equal to: &lt;&quot;Валери Петрунова&quot;&gt; (completed)" width="1876"/>
+                <img src="284c569ee0622dfd404b82f6e3776ac6eca0a4bf45ac5b823436a51c99dadb28.png" title=" He should see a value that is true" width="1876"/>
+                <img src="284c569ee0622dfd404b82f6e3776ac6eca0a4bf45ac5b823436a51c99dadb28.png" title=" He should see a value that is true" width="1876"/>
+                <img src="284c569ee0622dfd404b82f6e3776ac6eca0a4bf45ac5b823436a51c99dadb28.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="284c569ee0622dfd404b82f6e3776ac6eca0a4bf45ac5b823436a51c99dadb28.png" title=" He should see a value that is true" width="1876"/>
+                <img src="284c569ee0622dfd404b82f6e3776ac6eca0a4bf45ac5b823436a51c99dadb28.png" title=" He enters 'Ваня Борисова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="1f8e31015d548e19b02e89d94178a08ac837543f25cc01ff46e1b402dc765ab4.png" title=" He enters 'Ваня Борисова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="b3cd72f5c012943cadb848078df88573f9c2943e8f937962378596ab8ecf48c1.png" title=" He should see a value that is true" width="1876"/>
+                <img src="b3cd72f5c012943cadb848078df88573f9c2943e8f937962378596ab8ecf48c1.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="b3cd72f5c012943cadb848078df88573f9c2943e8f937962378596ab8ecf48c1.png" title=" He should see a value that is equal to: &lt;&quot;Ваня Борисова&quot;&gt;" width="1876"/>
+                <img src="b3cd72f5c012943cadb848078df88573f9c2943e8f937962378596ab8ecf48c1.png" title=" He should see a value that is true" width="1876"/>
+                <img src="00a45e62d4b5a87396fc3d3032b721466b6f620af434feea86eff0fec445830d.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="00a45e62d4b5a87396fc3d3032b721466b6f620af434feea86eff0fec445830d.png" title=" He should see a value that is true" width="1876"/>
+                <img src="00a45e62d4b5a87396fc3d3032b721466b6f620af434feea86eff0fec445830d.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="00a45e62d4b5a87396fc3d3032b721466b6f620af434feea86eff0fec445830d.png" title=" He should see a value that is true" width="1876"/>
+                <img src="00a45e62d4b5a87396fc3d3032b721466b6f620af434feea86eff0fec445830d.png" title=" He enters 'Василий Каракаш' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="09078b94873df67db7d6f22fe46800c00a053874e40b242599741f910bed965d.png" title=" He enters 'Василий Каракаш' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="f8158bbe9fa9976827193dacba6c5559a903835f5dd8fdbcb7e9e580e03aa0fa.png" title=" He should see a value that is true" width="1876"/>
+                <img src="f8158bbe9fa9976827193dacba6c5559a903835f5dd8fdbcb7e9e580e03aa0fa.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="f8158bbe9fa9976827193dacba6c5559a903835f5dd8fdbcb7e9e580e03aa0fa.png" title=" He should see a value that is equal to: &lt;&quot;Василий Каракаш&quot;&gt;" width="1876"/>
+                <img src="87f03e3c5cf221d082bdb07c95eff7a02683cdbe27f29262ad625a6716f3369f.png" title=" He should see a value that is equal to: &lt;&quot;Василий Каракаш&quot;&gt; (completed)" width="1876"/>
+                <img src="87f03e3c5cf221d082bdb07c95eff7a02683cdbe27f29262ad625a6716f3369f.png" title=" He should see a value that is true" width="1876"/>
+                <img src="87f03e3c5cf221d082bdb07c95eff7a02683cdbe27f29262ad625a6716f3369f.png" title=" He should see a value that is true" width="1876"/>
+                <img src="87f03e3c5cf221d082bdb07c95eff7a02683cdbe27f29262ad625a6716f3369f.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="87f03e3c5cf221d082bdb07c95eff7a02683cdbe27f29262ad625a6716f3369f.png" title=" He should see a value that is true" width="1876"/>
+                <img src="87f03e3c5cf221d082bdb07c95eff7a02683cdbe27f29262ad625a6716f3369f.png" title=" He enters 'Велина Статкова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="f9b360b7247e25b82e5a8f08e3aee2556ad394639bb9f98f9b2aa2828f935220.png" title=" He enters 'Велина Статкова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="b1a0670fab02a5edddd74062de9baf25b0ecfb50a317075077675f8389785fbe.png" title=" He should see a value that is true" width="1876"/>
+                <img src="b1a0670fab02a5edddd74062de9baf25b0ecfb50a317075077675f8389785fbe.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="b1a0670fab02a5edddd74062de9baf25b0ecfb50a317075077675f8389785fbe.png" title=" He should see a value that is equal to: &lt;&quot;Велина Статкова&quot;&gt;" width="1876"/>
+                <img src="b1a0670fab02a5edddd74062de9baf25b0ecfb50a317075077675f8389785fbe.png" title=" He should see a value that is true" width="1876"/>
+                <img src="c922a248613fe8993cd844b87550db3d11904c9c804097e1ece2858776c06c53.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="c922a248613fe8993cd844b87550db3d11904c9c804097e1ece2858776c06c53.png" title=" He should see a value that is true" width="1876"/>
+                <img src="c922a248613fe8993cd844b87550db3d11904c9c804097e1ece2858776c06c53.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="c922a248613fe8993cd844b87550db3d11904c9c804097e1ece2858776c06c53.png" title=" He should see a value that is true" width="1876"/>
+                <img src="c922a248613fe8993cd844b87550db3d11904c9c804097e1ece2858776c06c53.png" title=" He enters 'Веселин Милчев' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="2f32d799d0ed3ad7da29b201e2da20a59e3f0b84ab533b71dcab0ecc6d28c7e1.png" title=" He enters 'Веселин Милчев' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="7db48485c458e16daaa3f917e4dafac0fff8ba92f15443da7726ea8d142c02ce.png" title=" He should see a value that is true" width="1876"/>
+                <img src="7db48485c458e16daaa3f917e4dafac0fff8ba92f15443da7726ea8d142c02ce.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="7db48485c458e16daaa3f917e4dafac0fff8ba92f15443da7726ea8d142c02ce.png" title=" He should see a value that is equal to: &lt;&quot;Веселин Милчев&quot;&gt;" width="1876"/>
+                <img src="c5739b7c8d30350585abbb3322af44390d079365b7877a00a4414357d9861929.png" title=" He should see a value that is equal to: &lt;&quot;Веселин Милчев&quot;&gt; (completed)" width="1876"/>
+                <img src="c5739b7c8d30350585abbb3322af44390d079365b7877a00a4414357d9861929.png" title=" He should see a value that is true" width="1876"/>
+                <img src="c5739b7c8d30350585abbb3322af44390d079365b7877a00a4414357d9861929.png" title=" He should see a value that is true" width="1876"/>
+                <img src="c5739b7c8d30350585abbb3322af44390d079365b7877a00a4414357d9861929.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="c5739b7c8d30350585abbb3322af44390d079365b7877a00a4414357d9861929.png" title=" He should see a value that is true" width="1876"/>
+                <img src="c5739b7c8d30350585abbb3322af44390d079365b7877a00a4414357d9861929.png" title=" He enters 'Виктория Велчева' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="dcadda7f40a10ffba27a5db46853ac309104d823ab12cfee9eaf41ce5d5a29c4.png" title=" He enters 'Виктория Велчева' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="49ee49aa9211a9eb0376623509291c2f4e147c49cdd8a2dfe42b95474ae2d01e.png" title=" He should see a value that is true" width="1876"/>
+                <img src="49ee49aa9211a9eb0376623509291c2f4e147c49cdd8a2dfe42b95474ae2d01e.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="15f6c049be625a2c62e2ce2e80629189ae5dae7a0735418d509f1c80fdf0a772.png" title=" He should see a value that is equal to: &lt;1&gt; (completed)" width="1876"/>
+                <img src="15f6c049be625a2c62e2ce2e80629189ae5dae7a0735418d509f1c80fdf0a772.png" title=" He should see a value that is equal to: &lt;&quot;Виктория Велчева&quot;&gt;" width="1876"/>
+                <img src="15f6c049be625a2c62e2ce2e80629189ae5dae7a0735418d509f1c80fdf0a772.png" title=" He should see a value that is true" width="1876"/>
+                <img src="15f6c049be625a2c62e2ce2e80629189ae5dae7a0735418d509f1c80fdf0a772.png" title=" He should see a value that is true" width="1876"/>
+                <img src="15f6c049be625a2c62e2ce2e80629189ae5dae7a0735418d509f1c80fdf0a772.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="15f6c049be625a2c62e2ce2e80629189ae5dae7a0735418d509f1c80fdf0a772.png" title=" He should see a value that is true" width="1876"/>
+                <img src="15f6c049be625a2c62e2ce2e80629189ae5dae7a0735418d509f1c80fdf0a772.png" title=" He enters 'Виктория Георгиева' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="ec818f94ce1705faa37841eff0f4691187b14b6fb99861bbff89837f550097a6.png" title=" He enters 'Виктория Георгиева' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="4baf81e52ca6d107521137700d968878d8dd47c586aaf8748a78ac418d7dfe1d.png" title=" He should see a value that is true" width="1876"/>
+                <img src="4baf81e52ca6d107521137700d968878d8dd47c586aaf8748a78ac418d7dfe1d.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="4baf81e52ca6d107521137700d968878d8dd47c586aaf8748a78ac418d7dfe1d.png" title=" He should see a value that is equal to: &lt;&quot;Виктория Георгиева&quot;&gt;" width="1876"/>
+                <img src="3ed6999b18e9e9b0902469322e51bf57b15248b85a59369a6d729135be219aca.png" title=" He should see a value that is equal to: &lt;&quot;Виктория Георгиева&quot;&gt; (completed)" width="1876"/>
+                <img src="3ed6999b18e9e9b0902469322e51bf57b15248b85a59369a6d729135be219aca.png" title=" He should see a value that is true" width="1876"/>
+                <img src="3ed6999b18e9e9b0902469322e51bf57b15248b85a59369a6d729135be219aca.png" title=" He should see a value that is true" width="1876"/>
+                <img src="3ed6999b18e9e9b0902469322e51bf57b15248b85a59369a6d729135be219aca.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="3ed6999b18e9e9b0902469322e51bf57b15248b85a59369a6d729135be219aca.png" title=" He should see a value that is true" width="1876"/>
+                <img src="3ed6999b18e9e9b0902469322e51bf57b15248b85a59369a6d729135be219aca.png" title=" He enters 'Владимир Григоров' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="db7945e2b5d440dbd0478ea589e415b6aa107cf67a5929dd6632cb8b9f5dcced.png" title=" He enters 'Владимир Григоров' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="60ce9b7727a144e3e4400908e4426147f253f9eef7cd6a0c955dfc0679357b24.png" title=" He should see a value that is true" width="1876"/>
+                <img src="60ce9b7727a144e3e4400908e4426147f253f9eef7cd6a0c955dfc0679357b24.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="60ce9b7727a144e3e4400908e4426147f253f9eef7cd6a0c955dfc0679357b24.png" title=" He should see a value that is equal to: &lt;&quot;Владимир Григоров&quot;&gt;" width="1876"/>
+                <img src="60ce9b7727a144e3e4400908e4426147f253f9eef7cd6a0c955dfc0679357b24.png" title=" He should see a value that is true" width="1876"/>
+                <img src="346b94da94d8888472acd3c29e8502e923bc3872f3c794af84e13f7d9ca9566e.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="346b94da94d8888472acd3c29e8502e923bc3872f3c794af84e13f7d9ca9566e.png" title=" He should see a value that is true" width="1876"/>
+                <img src="346b94da94d8888472acd3c29e8502e923bc3872f3c794af84e13f7d9ca9566e.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="346b94da94d8888472acd3c29e8502e923bc3872f3c794af84e13f7d9ca9566e.png" title=" He should see a value that is true" width="1876"/>
+                <img src="346b94da94d8888472acd3c29e8502e923bc3872f3c794af84e13f7d9ca9566e.png" title=" He enters 'Владимир Миндов' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="6f2a1cf258039bcb03fb0d0c25ce592b9857ff769a5f64c236e5bd7b634ac329.png" title=" He enters 'Владимир Миндов' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="a94191ee834dcbf0163b78e92f10f23a901d93fcf388d0b9e7d7e45074e4e34d.png" title=" He should see a value that is true" width="1876"/>
+                <img src="a94191ee834dcbf0163b78e92f10f23a901d93fcf388d0b9e7d7e45074e4e34d.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="a94191ee834dcbf0163b78e92f10f23a901d93fcf388d0b9e7d7e45074e4e34d.png" title=" He should see a value that is equal to: &lt;&quot;Владимир Миндов&quot;&gt;" width="1876"/>
+                <img src="dd75b63d3b90134ee599e00731ddea2eab8bd279ae4ce49d25ce2d678274bef8.png" title=" He should see a value that is equal to: &lt;&quot;Владимир Миндов&quot;&gt; (completed)" width="1876"/>
+                <img src="dd75b63d3b90134ee599e00731ddea2eab8bd279ae4ce49d25ce2d678274bef8.png" title=" He should see a value that is true" width="1876"/>
+                <img src="dd75b63d3b90134ee599e00731ddea2eab8bd279ae4ce49d25ce2d678274bef8.png" title=" He should see a value that is true" width="1876"/>
+                <img src="dd75b63d3b90134ee599e00731ddea2eab8bd279ae4ce49d25ce2d678274bef8.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="dd75b63d3b90134ee599e00731ddea2eab8bd279ae4ce49d25ce2d678274bef8.png" title=" He should see a value that is true" width="1876"/>
+                <img src="dd75b63d3b90134ee599e00731ddea2eab8bd279ae4ce49d25ce2d678274bef8.png" title=" He enters 'Галина Димитрова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="8b38b87bd96ac177811056ba45ef0a48d9156f781190674dad7cd2fd3e4a7035.png" title=" He enters 'Галина Димитрова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="8e9cc639a81c0c7288423b91afb00d3e87e0f392621fdabd38196af5a1bb0882.png" title=" He should see a value that is true" width="1876"/>
+                <img src="8e9cc639a81c0c7288423b91afb00d3e87e0f392621fdabd38196af5a1bb0882.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="8e9cc639a81c0c7288423b91afb00d3e87e0f392621fdabd38196af5a1bb0882.png" title=" He should see a value that is equal to: &lt;&quot;Галина Димитрова&quot;&gt;" width="1876"/>
+                <img src="8e9cc639a81c0c7288423b91afb00d3e87e0f392621fdabd38196af5a1bb0882.png" title=" He should see a value that is true" width="1876"/>
+                <img src="b72e484b4c7fe871c9ee5be2dcf7cbb8f0371f4503dc75259cfe4ce8d07e2320.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="b72e484b4c7fe871c9ee5be2dcf7cbb8f0371f4503dc75259cfe4ce8d07e2320.png" title=" He should see a value that is true" width="1876"/>
+                <img src="b72e484b4c7fe871c9ee5be2dcf7cbb8f0371f4503dc75259cfe4ce8d07e2320.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="b72e484b4c7fe871c9ee5be2dcf7cbb8f0371f4503dc75259cfe4ce8d07e2320.png" title=" He should see a value that is true" width="1876"/>
+                <img src="b72e484b4c7fe871c9ee5be2dcf7cbb8f0371f4503dc75259cfe4ce8d07e2320.png" title=" He enters 'Георги Атанасов' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="2fba4bf4b0f6153b92f8c52325889dc8bbc075c3e611b61444812552d1a90c0c.png" title=" He enters 'Георги Атанасов' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="f27f0d459e7d2c3a8daeea7a3747d0c8b53ba72546ff2d0358b5b07c1bed5fd1.png" title=" He should see a value that is true" width="1876"/>
+                <img src="f27f0d459e7d2c3a8daeea7a3747d0c8b53ba72546ff2d0358b5b07c1bed5fd1.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="f27f0d459e7d2c3a8daeea7a3747d0c8b53ba72546ff2d0358b5b07c1bed5fd1.png" title=" He should see a value that is equal to: &lt;&quot;Георги Атанасов&quot;&gt;" width="1876"/>
+                <img src="f27f0d459e7d2c3a8daeea7a3747d0c8b53ba72546ff2d0358b5b07c1bed5fd1.png" title=" He should see a value that is true" width="1876"/>
+                <img src="cb97431f92f42b4855408b653bfef505db3219c92f03d31019221f873d49eeb8.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="cb97431f92f42b4855408b653bfef505db3219c92f03d31019221f873d49eeb8.png" title=" He should see a value that is true" width="1876"/>
+                <img src="cb97431f92f42b4855408b653bfef505db3219c92f03d31019221f873d49eeb8.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="cb97431f92f42b4855408b653bfef505db3219c92f03d31019221f873d49eeb8.png" title=" He should see a value that is true" width="1876"/>
+                <img src="cb97431f92f42b4855408b653bfef505db3219c92f03d31019221f873d49eeb8.png" title=" He enters 'Георги Цонкин' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="f6d7ad91dd936d64fb89e69b7040930eb24bf981d1605b610ce43023a4ca582c.png" title=" He enters 'Георги Цонкин' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="b707c9ca9d78b288efe0c16f2bb6a56b878a43d9946c39cdde5513484618cd5f.png" title=" He should see a value that is true" width="1876"/>
+                <img src="b707c9ca9d78b288efe0c16f2bb6a56b878a43d9946c39cdde5513484618cd5f.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="b707c9ca9d78b288efe0c16f2bb6a56b878a43d9946c39cdde5513484618cd5f.png" title=" He should see a value that is equal to: &lt;&quot;Георги Цонкин&quot;&gt;" width="1876"/>
+                <img src="b707c9ca9d78b288efe0c16f2bb6a56b878a43d9946c39cdde5513484618cd5f.png" title=" He should see a value that is true" width="1876"/>
+                <img src="5df6db5a3fa638d4351e70ec55ca8370a95e325c6522bf22e204b3bc1df58417.png" title=" He should see a value that is true" width="1876"/>
+                <img src="5df6db5a3fa638d4351e70ec55ca8370a95e325c6522bf22e204b3bc1df58417.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="5df6db5a3fa638d4351e70ec55ca8370a95e325c6522bf22e204b3bc1df58417.png" title=" He should see a value that is true" width="1876"/>
+                <img src="5df6db5a3fa638d4351e70ec55ca8370a95e325c6522bf22e204b3bc1df58417.png" title=" He enters 'Гергана Христова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="280687cd21ac77cdd64fd0e84a4820c53bc663e679274f8a5a5d0dd52734cb42.png" title=" He enters 'Гергана Христова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="13011714c438346f2a6f24703d271ddf00d7a863864a5095c6289356b7897846.png" title=" He should see a value that is true" width="1876"/>
+                <img src="13011714c438346f2a6f24703d271ddf00d7a863864a5095c6289356b7897846.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="13011714c438346f2a6f24703d271ddf00d7a863864a5095c6289356b7897846.png" title=" He should see a value that is equal to: &lt;&quot;Гергана Христова&quot;&gt;" width="1876"/>
+                <img src="13011714c438346f2a6f24703d271ddf00d7a863864a5095c6289356b7897846.png" title=" He should see a value that is true" width="1876"/>
+                <img src="9e5f916c9be686e8ec417ea0f8079fbc769ddf76d74ffa0d4a8c8cf1101ba56b.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="9e5f916c9be686e8ec417ea0f8079fbc769ddf76d74ffa0d4a8c8cf1101ba56b.png" title=" He should see a value that is true" width="1876"/>
+                <img src="9e5f916c9be686e8ec417ea0f8079fbc769ddf76d74ffa0d4a8c8cf1101ba56b.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="9e5f916c9be686e8ec417ea0f8079fbc769ddf76d74ffa0d4a8c8cf1101ba56b.png" title=" He should see a value that is true" width="1876"/>
+                <img src="9e5f916c9be686e8ec417ea0f8079fbc769ddf76d74ffa0d4a8c8cf1101ba56b.png" title=" He enters 'Глория Косева' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="66ec60f37ad475e789a480f8af85e7716181421c21b1a68cb2bebc9ea41d5eaf.png" title=" He enters 'Глория Косева' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="48f131edbef92ea20530c32cff1cd8baabc23a84518c2749d694b102e95f6dca.png" title=" He should see a value that is true" width="1876"/>
+                <img src="48f131edbef92ea20530c32cff1cd8baabc23a84518c2749d694b102e95f6dca.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="48f131edbef92ea20530c32cff1cd8baabc23a84518c2749d694b102e95f6dca.png" title=" He should see a value that is equal to: &lt;&quot;Глория Косева&quot;&gt;" width="1876"/>
+                <img src="48f131edbef92ea20530c32cff1cd8baabc23a84518c2749d694b102e95f6dca.png" title=" He should see a value that is true" width="1876"/>
+                <img src="09cae55c16555fec79485e34fc9b148e84c9e5e27fd9b7b8d0fe5f8f1cce09f0.png" title=" He should see a value that is true" width="1876"/>
+                <img src="09cae55c16555fec79485e34fc9b148e84c9e5e27fd9b7b8d0fe5f8f1cce09f0.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="09cae55c16555fec79485e34fc9b148e84c9e5e27fd9b7b8d0fe5f8f1cce09f0.png" title=" He should see a value that is true" width="1876"/>
+                <img src="09cae55c16555fec79485e34fc9b148e84c9e5e27fd9b7b8d0fe5f8f1cce09f0.png" title=" He enters 'Даниел Кръстев' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="f2904bd0a58389b6359c235227752112969547c578d3af347f8c0c9b62087a92.png" title=" He enters 'Даниел Кръстев' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="56e1c70a754f142f5759ff1618aadb01e95475107c422da88c498e7492e63904.png" title=" He should see a value that is true" width="1876"/>
+                <img src="56e1c70a754f142f5759ff1618aadb01e95475107c422da88c498e7492e63904.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="56e1c70a754f142f5759ff1618aadb01e95475107c422da88c498e7492e63904.png" title=" He should see a value that is equal to: &lt;&quot;Даниел Кръстев&quot;&gt;" width="1876"/>
+                <img src="56e1c70a754f142f5759ff1618aadb01e95475107c422da88c498e7492e63904.png" title=" He should see a value that is true" width="1876"/>
+                <img src="141d5485d5d1e34996f89f1aeaea87b65b58b116a50df8a29c1c2b03f4e363e0.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="141d5485d5d1e34996f89f1aeaea87b65b58b116a50df8a29c1c2b03f4e363e0.png" title=" He should see a value that is true" width="1876"/>
+                <img src="141d5485d5d1e34996f89f1aeaea87b65b58b116a50df8a29c1c2b03f4e363e0.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="141d5485d5d1e34996f89f1aeaea87b65b58b116a50df8a29c1c2b03f4e363e0.png" title=" He should see a value that is true" width="1876"/>
+                <img src="141d5485d5d1e34996f89f1aeaea87b65b58b116a50df8a29c1c2b03f4e363e0.png" title=" He enters 'Даниела Багелейска' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="320243e8437b92d0bc9ab51946b2b79eae2b33aea8f9a8734619262875a7290c.png" title=" He enters 'Даниела Багелейска' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="0df861723e91da0f9ef71f65bd347e5190149fe0804a3b912d83ee3cbd74c472.png" title=" He should see a value that is true" width="1876"/>
+                <img src="0df861723e91da0f9ef71f65bd347e5190149fe0804a3b912d83ee3cbd74c472.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="0df861723e91da0f9ef71f65bd347e5190149fe0804a3b912d83ee3cbd74c472.png" title=" He should see a value that is equal to: &lt;&quot;Даниела Багелейска&quot;&gt;" width="1876"/>
+                <img src="0df861723e91da0f9ef71f65bd347e5190149fe0804a3b912d83ee3cbd74c472.png" title=" He should see a value that is true" width="1876"/>
+                <img src="f9e7787b61b753222fbfd0484a81f12f38b5dc24ad6e0ab412e3e794f4fcea30.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="f9e7787b61b753222fbfd0484a81f12f38b5dc24ad6e0ab412e3e794f4fcea30.png" title=" He should see a value that is true" width="1876"/>
+                <img src="f9e7787b61b753222fbfd0484a81f12f38b5dc24ad6e0ab412e3e794f4fcea30.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="f9e7787b61b753222fbfd0484a81f12f38b5dc24ad6e0ab412e3e794f4fcea30.png" title=" He should see a value that is true" width="1876"/>
+                <img src="f9e7787b61b753222fbfd0484a81f12f38b5dc24ad6e0ab412e3e794f4fcea30.png" title=" He enters 'Даниела Гергова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="a7072554bf844f2d49e5b28d3559b86fa9bdf5fcc5fa51575eea353bd0bdf235.png" title=" He enters 'Даниела Гергова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="c266112058e21a59a56f4c74dcccbe3a49d2ca5bf8dd57bb533c2af7f3991567.png" title=" He should see a value that is true" width="1876"/>
+                <img src="c266112058e21a59a56f4c74dcccbe3a49d2ca5bf8dd57bb533c2af7f3991567.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="c266112058e21a59a56f4c74dcccbe3a49d2ca5bf8dd57bb533c2af7f3991567.png" title=" He should see a value that is equal to: &lt;&quot;Даниела Гергова&quot;&gt;" width="1876"/>
+                <img src="c266112058e21a59a56f4c74dcccbe3a49d2ca5bf8dd57bb533c2af7f3991567.png" title=" He should see a value that is true" width="1876"/>
+                <img src="7b9dbef4b8e3eafe106ba93fc8e3f2210b479cb81b94136663c55c692db66047.png" title=" He should see a value that is true" width="1876"/>
+                <img src="7b9dbef4b8e3eafe106ba93fc8e3f2210b479cb81b94136663c55c692db66047.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="7b9dbef4b8e3eafe106ba93fc8e3f2210b479cb81b94136663c55c692db66047.png" title=" He should see a value that is true" width="1876"/>
+                <img src="7b9dbef4b8e3eafe106ba93fc8e3f2210b479cb81b94136663c55c692db66047.png" title=" He enters 'Даниела Димитрова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="7addd28d14c0e0ea0ce51e8a9d83076a564307285f94c85b790d05fad125bd81.png" title=" He enters 'Даниела Димитрова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="33e28aa6644521f4dd242d8b4c5b14f9a13f9505bef2ec3baf51189a68fd8716.png" title=" He should see a value that is true" width="1876"/>
+                <img src="33e28aa6644521f4dd242d8b4c5b14f9a13f9505bef2ec3baf51189a68fd8716.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="33e28aa6644521f4dd242d8b4c5b14f9a13f9505bef2ec3baf51189a68fd8716.png" title=" He should see a value that is equal to: &lt;&quot;Даниела Димитрова&quot;&gt;" width="1876"/>
+                <img src="33e28aa6644521f4dd242d8b4c5b14f9a13f9505bef2ec3baf51189a68fd8716.png" title=" He should see a value that is true" width="1876"/>
+                <img src="edb9a84c7eb2273788dc043878918ac041c573e1f5ca15437a3537a28ad1524d.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="edb9a84c7eb2273788dc043878918ac041c573e1f5ca15437a3537a28ad1524d.png" title=" He should see a value that is true" width="1876"/>
+                <img src="edb9a84c7eb2273788dc043878918ac041c573e1f5ca15437a3537a28ad1524d.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="edb9a84c7eb2273788dc043878918ac041c573e1f5ca15437a3537a28ad1524d.png" title=" He should see a value that is true" width="1876"/>
+                <img src="edb9a84c7eb2273788dc043878918ac041c573e1f5ca15437a3537a28ad1524d.png" title=" He enters 'Десислава Градева' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="4c1b0d0d7aae13dc1a5a5d864aa6176b9b75a528e992bb12e47f12cb0a6b20ad.png" title=" He enters 'Десислава Градева' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="f2cf00dfaead8a964162e50bfabb4a57c1d996288e8a3c84bcee7ee904d2ac8e.png" title=" He should see a value that is true" width="1876"/>
+                <img src="f2cf00dfaead8a964162e50bfabb4a57c1d996288e8a3c84bcee7ee904d2ac8e.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="f2cf00dfaead8a964162e50bfabb4a57c1d996288e8a3c84bcee7ee904d2ac8e.png" title=" He should see a value that is equal to: &lt;&quot;Десислава Градева&quot;&gt;" width="1876"/>
+                <img src="f2cf00dfaead8a964162e50bfabb4a57c1d996288e8a3c84bcee7ee904d2ac8e.png" title=" He should see a value that is true" width="1876"/>
+                <img src="77b854e12e21cbde6e824901b1b5e135271fd1c6708e0baf9ba0b3e03fe75b97.png" title=" He should see a value that is true" width="1876"/>
+                <img src="77b854e12e21cbde6e824901b1b5e135271fd1c6708e0baf9ba0b3e03fe75b97.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="77b854e12e21cbde6e824901b1b5e135271fd1c6708e0baf9ba0b3e03fe75b97.png" title=" He should see a value that is true" width="1876"/>
+                <img src="77b854e12e21cbde6e824901b1b5e135271fd1c6708e0baf9ba0b3e03fe75b97.png" title=" He enters 'Десислава Паисиева' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="3e70cd92e3b5a163d0b8e1f73e6f4f8da82a042eacc353637f575db53dc396a7.png" title=" He enters 'Десислава Паисиева' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="5e861ab9948ebed70e5394c8ea4309fbc6c110b0c66b1542eda36b4a6f7a160f.png" title=" He should see a value that is true" width="1876"/>
+                <img src="5e861ab9948ebed70e5394c8ea4309fbc6c110b0c66b1542eda36b4a6f7a160f.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="5e861ab9948ebed70e5394c8ea4309fbc6c110b0c66b1542eda36b4a6f7a160f.png" title=" He should see a value that is equal to: &lt;&quot;Десислава Паисиева&quot;&gt;" width="1876"/>
+                <img src="328cdce4ffd23198509e7e5596a487e871006a27af7dbfc4e3e7220ae2d8d101.png" title=" He should see a value that is equal to: &lt;&quot;Десислава Паисиева&quot;&gt; (completed)" width="1876"/>
+                <img src="328cdce4ffd23198509e7e5596a487e871006a27af7dbfc4e3e7220ae2d8d101.png" title=" He should see a value that is true" width="1876"/>
+                <img src="328cdce4ffd23198509e7e5596a487e871006a27af7dbfc4e3e7220ae2d8d101.png" title=" He should see a value that is true" width="1876"/>
+                <img src="328cdce4ffd23198509e7e5596a487e871006a27af7dbfc4e3e7220ae2d8d101.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="328cdce4ffd23198509e7e5596a487e871006a27af7dbfc4e3e7220ae2d8d101.png" title=" He should see a value that is true" width="1876"/>
+                <img src="328cdce4ffd23198509e7e5596a487e871006a27af7dbfc4e3e7220ae2d8d101.png" title=" He enters 'Диана Антонова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="d226bb4586b4e80b1f12f5fc2ec3f2f771133bec29c35463bbc821dd98d9729d.png" title=" He enters 'Диана Антонова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="eb2b51025dd1448026401336db4ede271210014764172ad72f22a4312510e2f6.png" title=" He should see a value that is true" width="1876"/>
+                <img src="eb2b51025dd1448026401336db4ede271210014764172ad72f22a4312510e2f6.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="eb2b51025dd1448026401336db4ede271210014764172ad72f22a4312510e2f6.png" title=" He should see a value that is equal to: &lt;&quot;Диана Антонова&quot;&gt;" width="1876"/>
+                <img src="eb2b51025dd1448026401336db4ede271210014764172ad72f22a4312510e2f6.png" title=" He should see a value that is true" width="1876"/>
+                <img src="0d61bacf495d81db2578bf2ed6f4cfb6dfbe94cbf57d1abac292baa747e7205f.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="0d61bacf495d81db2578bf2ed6f4cfb6dfbe94cbf57d1abac292baa747e7205f.png" title=" He should see a value that is true" width="1876"/>
+                <img src="0d61bacf495d81db2578bf2ed6f4cfb6dfbe94cbf57d1abac292baa747e7205f.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="0d61bacf495d81db2578bf2ed6f4cfb6dfbe94cbf57d1abac292baa747e7205f.png" title=" He should see a value that is true" width="1876"/>
+                <img src="0d61bacf495d81db2578bf2ed6f4cfb6dfbe94cbf57d1abac292baa747e7205f.png" title=" He enters 'Диана Матеева' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="26044961bc3a61ad859eae356e33b4ce0e28c8077c687abe2f7890add4ee9401.png" title=" He enters 'Диана Матеева' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="3fd31a3b3c7dd359bbb06b8f3b3f44b31934136b936d741a4ba20b592237b47e.png" title=" He should see a value that is true" width="1876"/>
+                <img src="3fd31a3b3c7dd359bbb06b8f3b3f44b31934136b936d741a4ba20b592237b47e.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="3fd31a3b3c7dd359bbb06b8f3b3f44b31934136b936d741a4ba20b592237b47e.png" title=" He should see a value that is equal to: &lt;&quot;Диана Матеева&quot;&gt;" width="1876"/>
+                <img src="3fd31a3b3c7dd359bbb06b8f3b3f44b31934136b936d741a4ba20b592237b47e.png" title=" He should see a value that is true" width="1876"/>
+                <img src="3948c8f0ec9954f58e48cdc67db17a711e6c6168ce566b047be42b5c449eb3b6.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="3948c8f0ec9954f58e48cdc67db17a711e6c6168ce566b047be42b5c449eb3b6.png" title=" He should see a value that is true" width="1876"/>
+                <img src="3948c8f0ec9954f58e48cdc67db17a711e6c6168ce566b047be42b5c449eb3b6.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="3948c8f0ec9954f58e48cdc67db17a711e6c6168ce566b047be42b5c449eb3b6.png" title=" He should see a value that is true" width="1876"/>
+                <img src="3948c8f0ec9954f58e48cdc67db17a711e6c6168ce566b047be42b5c449eb3b6.png" title=" He enters 'Димитър Христов' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="40383f2968ea30b358f1ccdcfc1094969f800ac217782463de11b44dffb07aae.png" title=" He enters 'Димитър Христов' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="6c8057c37f469b0ddd64f50700608072f9a8b2eab1e14bd2abfdc5dd8c3611b3.png" title=" He should see a value that is true" width="1876"/>
+                <img src="6c8057c37f469b0ddd64f50700608072f9a8b2eab1e14bd2abfdc5dd8c3611b3.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="6c8057c37f469b0ddd64f50700608072f9a8b2eab1e14bd2abfdc5dd8c3611b3.png" title=" He should see a value that is equal to: &lt;&quot;Димитър Христов&quot;&gt;" width="1876"/>
+                <img src="6c8057c37f469b0ddd64f50700608072f9a8b2eab1e14bd2abfdc5dd8c3611b3.png" title=" He should see a value that is true" width="1876"/>
+                <img src="e553334cbd74fcdd9f39adb5cc314f5ca9e36e304e2b14cffd26b9f2b600c932.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="e553334cbd74fcdd9f39adb5cc314f5ca9e36e304e2b14cffd26b9f2b600c932.png" title=" He should see a value that is true" width="1876"/>
+                <img src="e553334cbd74fcdd9f39adb5cc314f5ca9e36e304e2b14cffd26b9f2b600c932.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="e553334cbd74fcdd9f39adb5cc314f5ca9e36e304e2b14cffd26b9f2b600c932.png" title=" He should see a value that is true" width="1876"/>
+                <img src="e553334cbd74fcdd9f39adb5cc314f5ca9e36e304e2b14cffd26b9f2b600c932.png" title=" He enters 'Димо Димов' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="3aa66ab013c5c3830a62918e06bb5baa1e1324038a6105204c4e942e4bac9fa5.png" title=" He enters 'Димо Димов' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="ec98fad6b2d09c7a226b4dfb4cbbdc809d56ab13c27707ecba7cc0626e0539e8.png" title=" He should see a value that is true" width="1876"/>
+                <img src="ec98fad6b2d09c7a226b4dfb4cbbdc809d56ab13c27707ecba7cc0626e0539e8.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="ec98fad6b2d09c7a226b4dfb4cbbdc809d56ab13c27707ecba7cc0626e0539e8.png" title=" He should see a value that is equal to: &lt;&quot;Димо Димов&quot;&gt;" width="1876"/>
+                <img src="ec98fad6b2d09c7a226b4dfb4cbbdc809d56ab13c27707ecba7cc0626e0539e8.png" title=" He should see a value that is true" width="1876"/>
+                <img src="ec98fad6b2d09c7a226b4dfb4cbbdc809d56ab13c27707ecba7cc0626e0539e8.png" title=" He should see a value that is true" width="1876"/>
+                <img src="ec98fad6b2d09c7a226b4dfb4cbbdc809d56ab13c27707ecba7cc0626e0539e8.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="ec98fad6b2d09c7a226b4dfb4cbbdc809d56ab13c27707ecba7cc0626e0539e8.png" title=" He should see a value that is true" width="1876"/>
+                <img src="ec98fad6b2d09c7a226b4dfb4cbbdc809d56ab13c27707ecba7cc0626e0539e8.png" title=" He enters 'Димчо Димчев' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="76035ee942dabb3395274299b46ade94f068fa10c2e7e386a4c90992e23c75d6.png" title=" He enters 'Димчо Димчев' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="343fe24adb7e04ba715faa2d5344e51ce2bf9c6d6f15d5acd87501e24938c14a.png" title=" He should see a value that is true" width="1876"/>
+                <img src="343fe24adb7e04ba715faa2d5344e51ce2bf9c6d6f15d5acd87501e24938c14a.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="343fe24adb7e04ba715faa2d5344e51ce2bf9c6d6f15d5acd87501e24938c14a.png" title=" He should see a value that is equal to: &lt;&quot;Димчо Димчев&quot;&gt;" width="1876"/>
+                <img src="343fe24adb7e04ba715faa2d5344e51ce2bf9c6d6f15d5acd87501e24938c14a.png" title=" He should see a value that is true" width="1876"/>
+                <img src="343fe24adb7e04ba715faa2d5344e51ce2bf9c6d6f15d5acd87501e24938c14a.png" title=" He should see a value that is true" width="1876"/>
+                <img src="343fe24adb7e04ba715faa2d5344e51ce2bf9c6d6f15d5acd87501e24938c14a.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="343fe24adb7e04ba715faa2d5344e51ce2bf9c6d6f15d5acd87501e24938c14a.png" title=" He should see a value that is true" width="1876"/>
+                <img src="343fe24adb7e04ba715faa2d5344e51ce2bf9c6d6f15d5acd87501e24938c14a.png" title=" He enters 'Евелина Богданова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="56fbccb70f71d6352167b2df7b27b7efbce306aa7522b73f88233287bb62f17b.png" title=" He enters 'Евелина Богданова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="76873d39261830e8cbb4861daaf5c96121b77cb470bed08e5e1fd52dc91e5764.png" title=" He should see a value that is true" width="1876"/>
+                <img src="76873d39261830e8cbb4861daaf5c96121b77cb470bed08e5e1fd52dc91e5764.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="76873d39261830e8cbb4861daaf5c96121b77cb470bed08e5e1fd52dc91e5764.png" title=" He should see a value that is equal to: &lt;&quot;Евелина Богданова&quot;&gt;" width="1876"/>
+                <img src="76873d39261830e8cbb4861daaf5c96121b77cb470bed08e5e1fd52dc91e5764.png" title=" He should see a value that is true" width="1876"/>
+                <img src="9367e680c9df5623aba8a5683a6c91f978ccdc1bc77e89cd31cce294945f9413.png" title=" He should see a value that is true" width="1876"/>
+                <img src="9367e680c9df5623aba8a5683a6c91f978ccdc1bc77e89cd31cce294945f9413.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="9367e680c9df5623aba8a5683a6c91f978ccdc1bc77e89cd31cce294945f9413.png" title=" He should see a value that is true" width="1876"/>
+                <img src="9367e680c9df5623aba8a5683a6c91f978ccdc1bc77e89cd31cce294945f9413.png" title=" He enters 'Елеонора Цакова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="a44be4c3f47f522fa6bb3fa704916c66b2efbe7cf0cf1a8c7768c0e254da8e1e.png" title=" He enters 'Елеонора Цакова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="7f02b3285e526ab8e346e944416ea8ae9c5bdfc7627d788021bac35db20b1c62.png" title=" He should see a value that is true" width="1876"/>
+                <img src="7f02b3285e526ab8e346e944416ea8ae9c5bdfc7627d788021bac35db20b1c62.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="7f02b3285e526ab8e346e944416ea8ae9c5bdfc7627d788021bac35db20b1c62.png" title=" He should see a value that is equal to: &lt;&quot;Елеонора Цакова&quot;&gt;" width="1876"/>
+                <img src="7f02b3285e526ab8e346e944416ea8ae9c5bdfc7627d788021bac35db20b1c62.png" title=" He should see a value that is true" width="1876"/>
+                <img src="90b3adb7dfe50c3fc140158dafa11c1373ac37511d4ef678f5ff20d65801a661.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="90b3adb7dfe50c3fc140158dafa11c1373ac37511d4ef678f5ff20d65801a661.png" title=" He should see a value that is true" width="1876"/>
+                <img src="90b3adb7dfe50c3fc140158dafa11c1373ac37511d4ef678f5ff20d65801a661.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="90b3adb7dfe50c3fc140158dafa11c1373ac37511d4ef678f5ff20d65801a661.png" title=" He should see a value that is true" width="1876"/>
+                <img src="90b3adb7dfe50c3fc140158dafa11c1373ac37511d4ef678f5ff20d65801a661.png" title=" He enters 'Ели Стефанова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="a75ac264ba514fffd12000e48510a22ca2939f4ed16a3ecf09654871bc65f5ce.png" title=" He enters 'Ели Стефанова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="c2accff64f98fed7738c809cf99bf94f3d4640de82507bcbd0c5e556ca399f4f.png" title=" He should see a value that is true" width="1876"/>
+                <img src="c2accff64f98fed7738c809cf99bf94f3d4640de82507bcbd0c5e556ca399f4f.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="c2accff64f98fed7738c809cf99bf94f3d4640de82507bcbd0c5e556ca399f4f.png" title=" He should see a value that is equal to: &lt;&quot;Ели Стефанова&quot;&gt;" width="1876"/>
+                <img src="c2accff64f98fed7738c809cf99bf94f3d4640de82507bcbd0c5e556ca399f4f.png" title=" He should see a value that is true" width="1876"/>
+                <img src="51f424112bd9509cdd7f073ddac98e13f26ef2830484f44447b824bc76d1cb9e.png" title=" He should see a value that is true" width="1876"/>
+                <img src="51f424112bd9509cdd7f073ddac98e13f26ef2830484f44447b824bc76d1cb9e.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="51f424112bd9509cdd7f073ddac98e13f26ef2830484f44447b824bc76d1cb9e.png" title=" He should see a value that is true" width="1876"/>
+                <img src="51f424112bd9509cdd7f073ddac98e13f26ef2830484f44447b824bc76d1cb9e.png" title=" He enters 'Иван Горанов' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="1aa728d0494dd19fa6ea1080267df5fbcd9008d979b0c0f81c7ef24ae9e75c22.png" title=" He enters 'Иван Горанов' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="00b81f2d63f0f33cbccab726afd2641f44574a9db3f298e7fa19ed67e93c2862.png" title=" He should see a value that is true" width="1876"/>
+                <img src="00b81f2d63f0f33cbccab726afd2641f44574a9db3f298e7fa19ed67e93c2862.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="00b81f2d63f0f33cbccab726afd2641f44574a9db3f298e7fa19ed67e93c2862.png" title=" He should see a value that is equal to: &lt;&quot;Иван Горанов&quot;&gt;" width="1876"/>
+                <img src="00b81f2d63f0f33cbccab726afd2641f44574a9db3f298e7fa19ed67e93c2862.png" title=" He should see a value that is true" width="1876"/>
+                <img src="6ca14a0b29a684828c2b88dc9158177c5556c6565683f51f680ac0a2c84c1508.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="6ca14a0b29a684828c2b88dc9158177c5556c6565683f51f680ac0a2c84c1508.png" title=" He should see a value that is true" width="1876"/>
+                <img src="6ca14a0b29a684828c2b88dc9158177c5556c6565683f51f680ac0a2c84c1508.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="6ca14a0b29a684828c2b88dc9158177c5556c6565683f51f680ac0a2c84c1508.png" title=" He should see a value that is true" width="1876"/>
+                <img src="6ca14a0b29a684828c2b88dc9158177c5556c6565683f51f680ac0a2c84c1508.png" title=" He enters 'Иван Джонов' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="fa72482baa0695eec36d76eb0f7d601daf509f2c6e31317ba28e93bf1307e92f.png" title=" He enters 'Иван Джонов' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="3ea4e735aa898f8c553ba175d6893e482ad304774019bf3929312193f6c372ed.png" title=" He should see a value that is true" width="1876"/>
+                <img src="3ea4e735aa898f8c553ba175d6893e482ad304774019bf3929312193f6c372ed.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="3ea4e735aa898f8c553ba175d6893e482ad304774019bf3929312193f6c372ed.png" title=" He should see a value that is equal to: &lt;&quot;Иван Джонов&quot;&gt;" width="1876"/>
+                <img src="3ea4e735aa898f8c553ba175d6893e482ad304774019bf3929312193f6c372ed.png" title=" He should see a value that is true" width="1876"/>
+                <img src="391ca1014f32a7069e113104762fb2ee66b928d9cc6399cf46230be74bde58f5.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="391ca1014f32a7069e113104762fb2ee66b928d9cc6399cf46230be74bde58f5.png" title=" He should see a value that is true" width="1876"/>
+                <img src="391ca1014f32a7069e113104762fb2ee66b928d9cc6399cf46230be74bde58f5.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="391ca1014f32a7069e113104762fb2ee66b928d9cc6399cf46230be74bde58f5.png" title=" He should see a value that is true" width="1876"/>
+                <img src="391ca1014f32a7069e113104762fb2ee66b928d9cc6399cf46230be74bde58f5.png" title=" He enters 'Иван Иванов' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="b25a8cae3d3c1fce0fe69ecb9b9a586f99c5c099def9f9722409c565e86532ad.png" title=" He enters 'Иван Иванов' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="9ad89243e7eebb765844f1fcd660de0ab7dd215449f632bb2211ac23f2acd953.png" title=" He should see a value that is true" width="1876"/>
+                <img src="9ad89243e7eebb765844f1fcd660de0ab7dd215449f632bb2211ac23f2acd953.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="9ad89243e7eebb765844f1fcd660de0ab7dd215449f632bb2211ac23f2acd953.png" title=" He should see a value that is equal to: &lt;&quot;Иван Иванов&quot;&gt;" width="1876"/>
+                <img src="9ad89243e7eebb765844f1fcd660de0ab7dd215449f632bb2211ac23f2acd953.png" title=" He should see a value that is true" width="1876"/>
+                <img src="ad60b7c193b3e3cbb646c7639eea456588d1a443636f3309ad42c1ce3ed72d9b.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="ad60b7c193b3e3cbb646c7639eea456588d1a443636f3309ad42c1ce3ed72d9b.png" title=" He should see a value that is true" width="1876"/>
+                <img src="ad60b7c193b3e3cbb646c7639eea456588d1a443636f3309ad42c1ce3ed72d9b.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="ad60b7c193b3e3cbb646c7639eea456588d1a443636f3309ad42c1ce3ed72d9b.png" title=" He should see a value that is true" width="1876"/>
+                <img src="ad60b7c193b3e3cbb646c7639eea456588d1a443636f3309ad42c1ce3ed72d9b.png" title=" He enters 'Иван Пеев' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="f2db6bcfaf3e1a21173accccf5699710af8552e95b06a1d4e37f40871fc59135.png" title=" He enters 'Иван Пеев' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="8531bc322a1c55d5616649d88b582526f4bd57df52b5061ca791f05dba657739.png" title=" He should see a value that is true" width="1876"/>
+                <img src="8531bc322a1c55d5616649d88b582526f4bd57df52b5061ca791f05dba657739.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="8531bc322a1c55d5616649d88b582526f4bd57df52b5061ca791f05dba657739.png" title=" He should see a value that is equal to: &lt;&quot;Иван Пеев&quot;&gt;" width="1876"/>
+                <img src="8531bc322a1c55d5616649d88b582526f4bd57df52b5061ca791f05dba657739.png" title=" He should see a value that is true" width="1876"/>
+                <img src="99926481b61a0df5b4b15cab9f90197198892d6fa669d75b6e788db17aa4be84.png" title=" He should see a value that is true" width="1876"/>
+                <img src="99926481b61a0df5b4b15cab9f90197198892d6fa669d75b6e788db17aa4be84.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="99926481b61a0df5b4b15cab9f90197198892d6fa669d75b6e788db17aa4be84.png" title=" He should see a value that is true" width="1876"/>
+                <img src="99926481b61a0df5b4b15cab9f90197198892d6fa669d75b6e788db17aa4be84.png" title=" He enters 'Иво Кирилов' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="76791381e326045caf280066e2ff05504cc96888798cb0f9fb8008395d6978b3.png" title=" He enters 'Иво Кирилов' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="7fa21e4b64d0aae48e0b4f566e802673d861dc30367a6b3aef239c93af58fb2a.png" title=" He should see a value that is true" width="1876"/>
+                <img src="7fa21e4b64d0aae48e0b4f566e802673d861dc30367a6b3aef239c93af58fb2a.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="7fa21e4b64d0aae48e0b4f566e802673d861dc30367a6b3aef239c93af58fb2a.png" title=" He should see a value that is equal to: &lt;&quot;Иво Кирилов&quot;&gt;" width="1876"/>
+                <img src="7fa21e4b64d0aae48e0b4f566e802673d861dc30367a6b3aef239c93af58fb2a.png" title=" He should see a value that is true" width="1876"/>
+                <img src="645f192b9536f4a10e340d8794ce9849887938aa49da430e24684287be5d49b8.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="645f192b9536f4a10e340d8794ce9849887938aa49da430e24684287be5d49b8.png" title=" He should see a value that is true" width="1876"/>
+                <img src="645f192b9536f4a10e340d8794ce9849887938aa49da430e24684287be5d49b8.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="645f192b9536f4a10e340d8794ce9849887938aa49da430e24684287be5d49b8.png" title=" He should see a value that is true" width="1876"/>
+                <img src="645f192b9536f4a10e340d8794ce9849887938aa49da430e24684287be5d49b8.png" title=" He enters 'Илия Димитров' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="6a151b70589a583bf6e4207a8febde75b479bca5b40a87f350e127f8b2b4a923.png" title=" He enters 'Илия Димитров' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="9aa7578f9c6a41c04e333c046c5ace78a244c31c3ad9caec6d0c081ede329357.png" title=" He should see a value that is true" width="1876"/>
+                <img src="9aa7578f9c6a41c04e333c046c5ace78a244c31c3ad9caec6d0c081ede329357.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="9aa7578f9c6a41c04e333c046c5ace78a244c31c3ad9caec6d0c081ede329357.png" title=" He should see a value that is equal to: &lt;&quot;Илия Димитров&quot;&gt;" width="1876"/>
+                <img src="9aa7578f9c6a41c04e333c046c5ace78a244c31c3ad9caec6d0c081ede329357.png" title=" He should see a value that is true" width="1876"/>
+                <img src="cf447e03d92c6d7075e8214ccf0a65f1b82832f2e42d24e7ef6cf07bae2c485a.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="cf447e03d92c6d7075e8214ccf0a65f1b82832f2e42d24e7ef6cf07bae2c485a.png" title=" He should see a value that is true" width="1876"/>
+                <img src="cf447e03d92c6d7075e8214ccf0a65f1b82832f2e42d24e7ef6cf07bae2c485a.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="cf447e03d92c6d7075e8214ccf0a65f1b82832f2e42d24e7ef6cf07bae2c485a.png" title=" He should see a value that is true" width="1876"/>
+                <img src="cf447e03d92c6d7075e8214ccf0a65f1b82832f2e42d24e7ef6cf07bae2c485a.png" title=" He enters 'Ирина Варадинова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="d76e4ee737f4e03e0edd0534c78f778fe687b1f36e30584c9756fcee5e2a00b9.png" title=" He enters 'Ирина Варадинова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="b38b9c9de59942cadbf352d3727e3a8ca5db9d7a72e3ec40fa84dc3a86bc49d6.png" title=" He should see a value that is true" width="1876"/>
+                <img src="b38b9c9de59942cadbf352d3727e3a8ca5db9d7a72e3ec40fa84dc3a86bc49d6.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="b38b9c9de59942cadbf352d3727e3a8ca5db9d7a72e3ec40fa84dc3a86bc49d6.png" title=" He should see a value that is equal to: &lt;&quot;Ирина Варадинова&quot;&gt;" width="1876"/>
+                <img src="b38b9c9de59942cadbf352d3727e3a8ca5db9d7a72e3ec40fa84dc3a86bc49d6.png" title=" He should see a value that is true" width="1876"/>
+                <img src="4104a1c2dd84f1e38e7ee438393096550307e9a9b4622897555ac9885b7dc073.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="4104a1c2dd84f1e38e7ee438393096550307e9a9b4622897555ac9885b7dc073.png" title=" He should see a value that is true" width="1876"/>
+                <img src="4104a1c2dd84f1e38e7ee438393096550307e9a9b4622897555ac9885b7dc073.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="4104a1c2dd84f1e38e7ee438393096550307e9a9b4622897555ac9885b7dc073.png" title=" He should see a value that is true" width="1876"/>
+                <img src="4104a1c2dd84f1e38e7ee438393096550307e9a9b4622897555ac9885b7dc073.png" title=" He enters 'Йонко Златев' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="2a28fef855796a78498b411685e22fe99d3d886b50e4cbf99b82022eb84163d7.png" title=" He enters 'Йонко Златев' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="850e709d015b408fab21662c0db86951a0f2af8e767861e3e9fe93426da0ef81.png" title=" He should see a value that is true" width="1876"/>
+                <img src="850e709d015b408fab21662c0db86951a0f2af8e767861e3e9fe93426da0ef81.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="850e709d015b408fab21662c0db86951a0f2af8e767861e3e9fe93426da0ef81.png" title=" He should see a value that is equal to: &lt;&quot;Йонко Златев&quot;&gt;" width="1876"/>
+                <img src="850e709d015b408fab21662c0db86951a0f2af8e767861e3e9fe93426da0ef81.png" title=" He should see a value that is true" width="1876"/>
+                <img src="f7b5c03128d6017e2dd7e8e9df7d9f8c5b38dc1da839f9d5843f4a5210a1f2b1.png" title=" He should see a value that is true" width="1876"/>
+                <img src="f7b5c03128d6017e2dd7e8e9df7d9f8c5b38dc1da839f9d5843f4a5210a1f2b1.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="f7b5c03128d6017e2dd7e8e9df7d9f8c5b38dc1da839f9d5843f4a5210a1f2b1.png" title=" He should see a value that is true" width="1876"/>
+                <img src="f7b5c03128d6017e2dd7e8e9df7d9f8c5b38dc1da839f9d5843f4a5210a1f2b1.png" title=" He enters 'Калина Тонева' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="2ea78822f3000515f4112d1fa0a0ecd753e73619ad8982734c4d5301eafe50e0.png" title=" He enters 'Калина Тонева' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="670afac960a257731c2345ecb92b33e23cb98336714a8b46de12590e4b969e6c.png" title=" He should see a value that is true" width="1876"/>
+                <img src="670afac960a257731c2345ecb92b33e23cb98336714a8b46de12590e4b969e6c.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="670afac960a257731c2345ecb92b33e23cb98336714a8b46de12590e4b969e6c.png" title=" He should see a value that is equal to: &lt;&quot;Калина Тонева&quot;&gt;" width="1876"/>
+                <img src="670afac960a257731c2345ecb92b33e23cb98336714a8b46de12590e4b969e6c.png" title=" He should see a value that is true" width="1876"/>
+                <img src="70affa9b46c889ba2dcba5cfbc64c2633faea793a62230cecc2859829563287b.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="70affa9b46c889ba2dcba5cfbc64c2633faea793a62230cecc2859829563287b.png" title=" He should see a value that is true" width="1876"/>
+                <img src="70affa9b46c889ba2dcba5cfbc64c2633faea793a62230cecc2859829563287b.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="70affa9b46c889ba2dcba5cfbc64c2633faea793a62230cecc2859829563287b.png" title=" He should see a value that is true" width="1876"/>
+                <img src="70affa9b46c889ba2dcba5cfbc64c2633faea793a62230cecc2859829563287b.png" title=" He enters 'Камелия Петрова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="4bd6884bbb4f73b00c575b5992a053f168547ec725ed35a5b7d609a158b61b6d.png" title=" He enters 'Камелия Петрова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="33f14550e8e24aa09ed4c82dc71d448273f6498d6b3dd00e7fe380bca2c1008d.png" title=" He should see a value that is true" width="1876"/>
+                <img src="33f14550e8e24aa09ed4c82dc71d448273f6498d6b3dd00e7fe380bca2c1008d.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="33f14550e8e24aa09ed4c82dc71d448273f6498d6b3dd00e7fe380bca2c1008d.png" title=" He should see a value that is equal to: &lt;&quot;Камелия Петрова&quot;&gt;" width="1876"/>
+                <img src="33f14550e8e24aa09ed4c82dc71d448273f6498d6b3dd00e7fe380bca2c1008d.png" title=" He should see a value that is true" width="1876"/>
+                <img src="33f14550e8e24aa09ed4c82dc71d448273f6498d6b3dd00e7fe380bca2c1008d.png" title=" He should see a value that is true" width="1876"/>
+                <img src="33f14550e8e24aa09ed4c82dc71d448273f6498d6b3dd00e7fe380bca2c1008d.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="33f14550e8e24aa09ed4c82dc71d448273f6498d6b3dd00e7fe380bca2c1008d.png" title=" He should see a value that is true" width="1876"/>
+                <img src="33f14550e8e24aa09ed4c82dc71d448273f6498d6b3dd00e7fe380bca2c1008d.png" title=" He enters 'Констанца Иванова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="c7002f2851e8b8d6f0b06e0034eecd91f2a2cdb8f9645282c63509e49ac5e5a6.png" title=" He enters 'Констанца Иванова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="f04c6407173821e6be9dbc1dd7355b4be64b6d670ca808cf75f25c79cd96957f.png" title=" He should see a value that is true" width="1876"/>
+                <img src="f04c6407173821e6be9dbc1dd7355b4be64b6d670ca808cf75f25c79cd96957f.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="f04c6407173821e6be9dbc1dd7355b4be64b6d670ca808cf75f25c79cd96957f.png" title=" He should see a value that is equal to: &lt;&quot;Констанца Иванова&quot;&gt;" width="1876"/>
+                <img src="f04c6407173821e6be9dbc1dd7355b4be64b6d670ca808cf75f25c79cd96957f.png" title=" He should see a value that is true" width="1876"/>
+                <img src="f04c6407173821e6be9dbc1dd7355b4be64b6d670ca808cf75f25c79cd96957f.png" title=" He should see a value that is true" width="1876"/>
+                <img src="f04c6407173821e6be9dbc1dd7355b4be64b6d670ca808cf75f25c79cd96957f.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="f04c6407173821e6be9dbc1dd7355b4be64b6d670ca808cf75f25c79cd96957f.png" title=" He should see a value that is true" width="1876"/>
+                <img src="f04c6407173821e6be9dbc1dd7355b4be64b6d670ca808cf75f25c79cd96957f.png" title=" He enters 'Красимир Вуковски' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="d817f83e02d8e58ab0415259ad2a81d58d63c062050b902f456d2f0c1ca85679.png" title=" He enters 'Красимир Вуковски' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="570ba89bafcfadf14f95fe78b256a81811665bed19b43ccd2afd1cd74cdc12f8.png" title=" He should see a value that is true" width="1876"/>
+                <img src="570ba89bafcfadf14f95fe78b256a81811665bed19b43ccd2afd1cd74cdc12f8.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="570ba89bafcfadf14f95fe78b256a81811665bed19b43ccd2afd1cd74cdc12f8.png" title=" He should see a value that is equal to: &lt;&quot;Красимир Вуковски&quot;&gt;" width="1876"/>
+                <img src="570ba89bafcfadf14f95fe78b256a81811665bed19b43ccd2afd1cd74cdc12f8.png" title=" He should see a value that is true" width="1876"/>
+                <img src="befc225479a7e5eecc98ebd382fcf1d87e5fadd5963b546e9e6df4c069292aaa.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="befc225479a7e5eecc98ebd382fcf1d87e5fadd5963b546e9e6df4c069292aaa.png" title=" He should see a value that is true" width="1876"/>
+                <img src="befc225479a7e5eecc98ebd382fcf1d87e5fadd5963b546e9e6df4c069292aaa.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="befc225479a7e5eecc98ebd382fcf1d87e5fadd5963b546e9e6df4c069292aaa.png" title=" He should see a value that is true" width="1876"/>
+                <img src="befc225479a7e5eecc98ebd382fcf1d87e5fadd5963b546e9e6df4c069292aaa.png" title=" He enters 'Кристиян Борисов' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="db19efc0d7417f8b99da61be609e2cf380f565b9ea6f770391fe1fd901828a9d.png" title=" He enters 'Кристиян Борисов' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="9dea1d3ee5b0528e2b06b739f8f27be53cfc7c1e112cf8f4f19263a4b9e51a34.png" title=" He should see a value that is true" width="1876"/>
+                <img src="9dea1d3ee5b0528e2b06b739f8f27be53cfc7c1e112cf8f4f19263a4b9e51a34.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="9dea1d3ee5b0528e2b06b739f8f27be53cfc7c1e112cf8f4f19263a4b9e51a34.png" title=" He should see a value that is equal to: &lt;&quot;Кристиян Борисов&quot;&gt;" width="1876"/>
+                <img src="9dea1d3ee5b0528e2b06b739f8f27be53cfc7c1e112cf8f4f19263a4b9e51a34.png" title=" He should see a value that is true" width="1876"/>
+                <img src="9dea1d3ee5b0528e2b06b739f8f27be53cfc7c1e112cf8f4f19263a4b9e51a34.png" title=" He should see a value that is true" width="1876"/>
+                <img src="9dea1d3ee5b0528e2b06b739f8f27be53cfc7c1e112cf8f4f19263a4b9e51a34.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="9dea1d3ee5b0528e2b06b739f8f27be53cfc7c1e112cf8f4f19263a4b9e51a34.png" title=" He should see a value that is true" width="1876"/>
+                <img src="9dea1d3ee5b0528e2b06b739f8f27be53cfc7c1e112cf8f4f19263a4b9e51a34.png" title=" He enters 'Любомир Димитров' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="510e5484dc679cd927026e8a004bf4b0feb72f34fd5d9e6eeb9a04eda02bf65b.png" title=" He enters 'Любомир Димитров' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="54beea6438ab61b04d7000567acf1dc627017d6450e3d5806f60abbf16fe5ffa.png" title=" He should see a value that is true" width="1876"/>
+                <img src="54beea6438ab61b04d7000567acf1dc627017d6450e3d5806f60abbf16fe5ffa.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="54beea6438ab61b04d7000567acf1dc627017d6450e3d5806f60abbf16fe5ffa.png" title=" He should see a value that is equal to: &lt;&quot;Любомир Димитров&quot;&gt;" width="1876"/>
+                <img src="54beea6438ab61b04d7000567acf1dc627017d6450e3d5806f60abbf16fe5ffa.png" title=" He should see a value that is true" width="1876"/>
+                <img src="54beea6438ab61b04d7000567acf1dc627017d6450e3d5806f60abbf16fe5ffa.png" title=" He should see a value that is true" width="1876"/>
+                <img src="54beea6438ab61b04d7000567acf1dc627017d6450e3d5806f60abbf16fe5ffa.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="54beea6438ab61b04d7000567acf1dc627017d6450e3d5806f60abbf16fe5ffa.png" title=" He should see a value that is true" width="1876"/>
+                <img src="54beea6438ab61b04d7000567acf1dc627017d6450e3d5806f60abbf16fe5ffa.png" title=" He enters 'Любомира Томанова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="818bb155021bca4b1e893a805753b1cc0e8d05d9ac07f7c2f306814138c9f3b6.png" title=" He enters 'Любомира Томанова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="7b4057a347ef366788dafa3914611b60ab611783d1bfc1d115f4e1792c174c30.png" title=" He should see a value that is true" width="1876"/>
+                <img src="7b4057a347ef366788dafa3914611b60ab611783d1bfc1d115f4e1792c174c30.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="7b4057a347ef366788dafa3914611b60ab611783d1bfc1d115f4e1792c174c30.png" title=" He should see a value that is equal to: &lt;&quot;Любомира Томанова&quot;&gt;" width="1876"/>
+                <img src="7b4057a347ef366788dafa3914611b60ab611783d1bfc1d115f4e1792c174c30.png" title=" He should see a value that is true" width="1876"/>
+                <img src="7b4057a347ef366788dafa3914611b60ab611783d1bfc1d115f4e1792c174c30.png" title=" He should see a value that is true" width="1876"/>
+                <img src="7b4057a347ef366788dafa3914611b60ab611783d1bfc1d115f4e1792c174c30.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="7b4057a347ef366788dafa3914611b60ab611783d1bfc1d115f4e1792c174c30.png" title=" He should see a value that is true" width="1876"/>
+                <img src="7b4057a347ef366788dafa3914611b60ab611783d1bfc1d115f4e1792c174c30.png" title=" He enters 'Людмил Таков' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="f2be23ed9da0a2753f95de392bdc104289b6a09d30f231cdd10e8b2f5d19fc78.png" title=" He enters 'Людмил Таков' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="89f598f3bae919425d45cd6517b1d16a195f97e09abe645ce67bdb1efde07e1c.png" title=" He should see a value that is true" width="1876"/>
+                <img src="89f598f3bae919425d45cd6517b1d16a195f97e09abe645ce67bdb1efde07e1c.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="89f598f3bae919425d45cd6517b1d16a195f97e09abe645ce67bdb1efde07e1c.png" title=" He should see a value that is equal to: &lt;&quot;Людмил Таков&quot;&gt;" width="1876"/>
+                <img src="89f598f3bae919425d45cd6517b1d16a195f97e09abe645ce67bdb1efde07e1c.png" title=" He should see a value that is true" width="1876"/>
+                <img src="89f598f3bae919425d45cd6517b1d16a195f97e09abe645ce67bdb1efde07e1c.png" title=" He should see a value that is true" width="1876"/>
+                <img src="89f598f3bae919425d45cd6517b1d16a195f97e09abe645ce67bdb1efde07e1c.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="89f598f3bae919425d45cd6517b1d16a195f97e09abe645ce67bdb1efde07e1c.png" title=" He should see a value that is true" width="1876"/>
+                <img src="89f598f3bae919425d45cd6517b1d16a195f97e09abe645ce67bdb1efde07e1c.png" title=" He enters 'Мара Писарова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="79c0b2720b9a7bf90481c456c5b435490e68b632ecdcff0d5fd412feee3ec40a.png" title=" He enters 'Мара Писарова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="d1ccc54d5feb9975efa351f616abe12520628c8d41f442f9d100062254f3e437.png" title=" He should see a value that is true" width="1876"/>
+                <img src="d1ccc54d5feb9975efa351f616abe12520628c8d41f442f9d100062254f3e437.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="d1ccc54d5feb9975efa351f616abe12520628c8d41f442f9d100062254f3e437.png" title=" He should see a value that is equal to: &lt;&quot;Мара Писарова&quot;&gt;" width="1876"/>
+                <img src="d1ccc54d5feb9975efa351f616abe12520628c8d41f442f9d100062254f3e437.png" title=" He should see a value that is true" width="1876"/>
+                <img src="35a7e10c8ee727a57bea02b8a92e6ba6b9d40706a80434a4f5f56b6f68de3432.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="35a7e10c8ee727a57bea02b8a92e6ba6b9d40706a80434a4f5f56b6f68de3432.png" title=" He should see a value that is true" width="1876"/>
+                <img src="35a7e10c8ee727a57bea02b8a92e6ba6b9d40706a80434a4f5f56b6f68de3432.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="35a7e10c8ee727a57bea02b8a92e6ba6b9d40706a80434a4f5f56b6f68de3432.png" title=" He should see a value that is true" width="1876"/>
+                <img src="35a7e10c8ee727a57bea02b8a92e6ba6b9d40706a80434a4f5f56b6f68de3432.png" title=" He enters 'Марио Димитров' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="3bce4aa53fbc5cc6c2b0792a097eef1d5763c1251ffcfc1e20de25828a01b976.png" title=" He enters 'Марио Димитров' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="ebc196eec6d1ace9c1f6dfa4b980e85c12faa66a8619498c3a38360acf5e3cdf.png" title=" He should see a value that is true" width="1876"/>
+                <img src="ebc196eec6d1ace9c1f6dfa4b980e85c12faa66a8619498c3a38360acf5e3cdf.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="ebc196eec6d1ace9c1f6dfa4b980e85c12faa66a8619498c3a38360acf5e3cdf.png" title=" He should see a value that is equal to: &lt;&quot;Марио Димитров&quot;&gt;" width="1876"/>
+                <img src="ebc196eec6d1ace9c1f6dfa4b980e85c12faa66a8619498c3a38360acf5e3cdf.png" title=" He should see a value that is true" width="1876"/>
+                <img src="ebc196eec6d1ace9c1f6dfa4b980e85c12faa66a8619498c3a38360acf5e3cdf.png" title=" He should see a value that is true" width="1876"/>
+                <img src="ebc196eec6d1ace9c1f6dfa4b980e85c12faa66a8619498c3a38360acf5e3cdf.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="ebc196eec6d1ace9c1f6dfa4b980e85c12faa66a8619498c3a38360acf5e3cdf.png" title=" He should see a value that is true" width="1876"/>
+                <img src="ebc196eec6d1ace9c1f6dfa4b980e85c12faa66a8619498c3a38360acf5e3cdf.png" title=" He enters 'Мария Желева' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="9d340fb3c766be69747e6de36894e7b7a5ca5cffd920b28c393251e16678169a.png" title=" He enters 'Мария Желева' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="f3523356f227bdc9a0b7635a55d656c7a68652c84e65f67d62c1b7744337a462.png" title=" He should see a value that is true" width="1876"/>
+                <img src="f3523356f227bdc9a0b7635a55d656c7a68652c84e65f67d62c1b7744337a462.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="f3523356f227bdc9a0b7635a55d656c7a68652c84e65f67d62c1b7744337a462.png" title=" He should see a value that is equal to: &lt;&quot;Мария Желева&quot;&gt;" width="1876"/>
+                <img src="f3523356f227bdc9a0b7635a55d656c7a68652c84e65f67d62c1b7744337a462.png" title=" He should see a value that is true" width="1876"/>
+                <img src="b8900aa7f016e0c703afffa663762734cf254caa564df6c0b3bec6cdb3d0938a.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="b8900aa7f016e0c703afffa663762734cf254caa564df6c0b3bec6cdb3d0938a.png" title=" He should see a value that is true" width="1876"/>
+                <img src="b8900aa7f016e0c703afffa663762734cf254caa564df6c0b3bec6cdb3d0938a.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="b8900aa7f016e0c703afffa663762734cf254caa564df6c0b3bec6cdb3d0938a.png" title=" He should see a value that is true" width="1876"/>
+                <img src="b8900aa7f016e0c703afffa663762734cf254caa564df6c0b3bec6cdb3d0938a.png" title=" He enters 'Мария Найденова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="d0458dfe2eee0dee0a5143d8c838357e4baeaa08dd290d638857d3db1a9f60e6.png" title=" He enters 'Мария Найденова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="bb6f815935f2ecfb3b812dc43c733beac6bca7a30a34dbd0309550c7c0eee67c.png" title=" He should see a value that is true" width="1876"/>
+                <img src="bb6f815935f2ecfb3b812dc43c733beac6bca7a30a34dbd0309550c7c0eee67c.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="bb6f815935f2ecfb3b812dc43c733beac6bca7a30a34dbd0309550c7c0eee67c.png" title=" He should see a value that is equal to: &lt;&quot;Мария Найденова&quot;&gt;" width="1876"/>
+                <img src="bb6f815935f2ecfb3b812dc43c733beac6bca7a30a34dbd0309550c7c0eee67c.png" title=" He should see a value that is true" width="1876"/>
+                <img src="888a8586e7ae15b8db38172be84ad828cc9c3ab943c515f22216977ad9efe94e.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="888a8586e7ae15b8db38172be84ad828cc9c3ab943c515f22216977ad9efe94e.png" title=" He should see a value that is true" width="1876"/>
+                <img src="888a8586e7ae15b8db38172be84ad828cc9c3ab943c515f22216977ad9efe94e.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="888a8586e7ae15b8db38172be84ad828cc9c3ab943c515f22216977ad9efe94e.png" title=" He should see a value that is true" width="1876"/>
+                <img src="888a8586e7ae15b8db38172be84ad828cc9c3ab943c515f22216977ad9efe94e.png" title=" He enters 'Мария Хаджиева' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="3b0e629196fbb012417149cb3dadd6022b61df27d575cf7526d4d947fdb14242.png" title=" He enters 'Мария Хаджиева' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="f2fcaa397c08d399f1573affca102909d4bdbc2e6794b355d9772f950d5ebd8f.png" title=" He should see a value that is true" width="1876"/>
+                <img src="f2fcaa397c08d399f1573affca102909d4bdbc2e6794b355d9772f950d5ebd8f.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="f2fcaa397c08d399f1573affca102909d4bdbc2e6794b355d9772f950d5ebd8f.png" title=" He should see a value that is equal to: &lt;&quot;Мария Хаджиева&quot;&gt;" width="1876"/>
+                <img src="f2fcaa397c08d399f1573affca102909d4bdbc2e6794b355d9772f950d5ebd8f.png" title=" He should see a value that is true" width="1876"/>
+                <img src="7cef4c9e24dbe2c94b81564686f79d11f82f91623e0f6ba7f000a53e1b0d00d7.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="7cef4c9e24dbe2c94b81564686f79d11f82f91623e0f6ba7f000a53e1b0d00d7.png" title=" He should see a value that is true" width="1876"/>
+                <img src="7cef4c9e24dbe2c94b81564686f79d11f82f91623e0f6ba7f000a53e1b0d00d7.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="7cef4c9e24dbe2c94b81564686f79d11f82f91623e0f6ba7f000a53e1b0d00d7.png" title=" He should see a value that is true" width="1876"/>
+                <img src="7cef4c9e24dbe2c94b81564686f79d11f82f91623e0f6ba7f000a53e1b0d00d7.png" title=" He enters 'Мариян Георгиев' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="4d09d67194ef0ba83a7b939bc2751631616994fa7f7114eb21a2aab336447a90.png" title=" He enters 'Мариян Георгиев' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="94dc6ce23272801fbd9157fbbf9ba1470cec422dfd27e568488d28746fc2d3ec.png" title=" He should see a value that is true" width="1876"/>
+                <img src="94dc6ce23272801fbd9157fbbf9ba1470cec422dfd27e568488d28746fc2d3ec.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="94dc6ce23272801fbd9157fbbf9ba1470cec422dfd27e568488d28746fc2d3ec.png" title=" He should see a value that is equal to: &lt;&quot;Мариян Георгиев&quot;&gt;" width="1876"/>
+                <img src="94dc6ce23272801fbd9157fbbf9ba1470cec422dfd27e568488d28746fc2d3ec.png" title=" He should see a value that is true" width="1876"/>
+                <img src="94dc6ce23272801fbd9157fbbf9ba1470cec422dfd27e568488d28746fc2d3ec.png" title=" He should see a value that is true" width="1876"/>
+                <img src="94dc6ce23272801fbd9157fbbf9ba1470cec422dfd27e568488d28746fc2d3ec.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="94dc6ce23272801fbd9157fbbf9ba1470cec422dfd27e568488d28746fc2d3ec.png" title=" He should see a value that is true" width="1876"/>
+                <img src="cc4247449dfbab2fae87a6e095d0a2e62cd7cc4b679f85be1724a16386831687.png" title=" He enters 'Миглена Игнатова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="48a1e548b8d92c373f00dc18a035f79cfcd6469688ebfaef598c636ba2cf87f9.png" title=" He enters 'Миглена Игнатова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="91d061640b55099c5d86fbd4acb1a223523ac11cb00723e2a1f23f8fbc3b3bd2.png" title=" He should see a value that is true" width="1876"/>
+                <img src="91d061640b55099c5d86fbd4acb1a223523ac11cb00723e2a1f23f8fbc3b3bd2.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="91d061640b55099c5d86fbd4acb1a223523ac11cb00723e2a1f23f8fbc3b3bd2.png" title=" He should see a value that is equal to: &lt;&quot;Миглена Игнатова&quot;&gt;" width="1876"/>
+                <img src="91d061640b55099c5d86fbd4acb1a223523ac11cb00723e2a1f23f8fbc3b3bd2.png" title=" He should see a value that is true" width="1876"/>
+                <img src="91d061640b55099c5d86fbd4acb1a223523ac11cb00723e2a1f23f8fbc3b3bd2.png" title=" He should see a value that is true" width="1876"/>
+                <img src="91d061640b55099c5d86fbd4acb1a223523ac11cb00723e2a1f23f8fbc3b3bd2.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="91d061640b55099c5d86fbd4acb1a223523ac11cb00723e2a1f23f8fbc3b3bd2.png" title=" He should see a value that is true" width="1876"/>
+                <img src="91d061640b55099c5d86fbd4acb1a223523ac11cb00723e2a1f23f8fbc3b3bd2.png" title=" He enters 'Мила Вълкова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="35b4c10a017105b400d0c764dc889f55f2bac407a5013d9b6d63677e9908ff82.png" title=" He enters 'Мила Вълкова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="e54a3393a1ad6fb3eb8ef1120a25e3afa61cbf5f4e4514f891fa6e0411a7bc74.png" title=" He should see a value that is true" width="1876"/>
+                <img src="e54a3393a1ad6fb3eb8ef1120a25e3afa61cbf5f4e4514f891fa6e0411a7bc74.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="e54a3393a1ad6fb3eb8ef1120a25e3afa61cbf5f4e4514f891fa6e0411a7bc74.png" title=" He should see a value that is equal to: &lt;&quot;Мила Вълкова&quot;&gt;" width="1876"/>
+                <img src="e54a3393a1ad6fb3eb8ef1120a25e3afa61cbf5f4e4514f891fa6e0411a7bc74.png" title=" He should see a value that is true" width="1876"/>
+                <img src="e54a3393a1ad6fb3eb8ef1120a25e3afa61cbf5f4e4514f891fa6e0411a7bc74.png" title=" He should see a value that is true" width="1876"/>
+                <img src="1161423e656345b077d31fc3ce1ee57b4b64027a1335a5e818f8311199158a81.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="1161423e656345b077d31fc3ce1ee57b4b64027a1335a5e818f8311199158a81.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="1161423e656345b077d31fc3ce1ee57b4b64027a1335a5e818f8311199158a81.png" title=" He should see a value that is true" width="1876"/>
+                <img src="1161423e656345b077d31fc3ce1ee57b4b64027a1335a5e818f8311199158a81.png" title=" He enters 'Милена Василева' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="091bf4dc96b536f4f8b10e4e6ecb7b36f19bbd50a1828b4e964b7ed602c7c55c.png" title=" He enters 'Милена Василева' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="5e3d0dea83b1831db50d34d70192e8af033e45531e87632db638b6db9a4db2b6.png" title=" He should see a value that is true" width="1876"/>
+                <img src="5e3d0dea83b1831db50d34d70192e8af033e45531e87632db638b6db9a4db2b6.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="5e3d0dea83b1831db50d34d70192e8af033e45531e87632db638b6db9a4db2b6.png" title=" He should see a value that is equal to: &lt;&quot;Милена Василева&quot;&gt;" width="1876"/>
+                <img src="2ddc4be9eafbe6b0818f17a2f9e1a7776a8b27255316aebc6c39e6414993326d.png" title=" He should see a value that is equal to: &lt;&quot;Милена Василева&quot;&gt; (completed)" width="1876"/>
+                <img src="2ddc4be9eafbe6b0818f17a2f9e1a7776a8b27255316aebc6c39e6414993326d.png" title=" He should see a value that is true" width="1876"/>
+                <img src="2ddc4be9eafbe6b0818f17a2f9e1a7776a8b27255316aebc6c39e6414993326d.png" title=" He should see a value that is true" width="1876"/>
+                <img src="2ddc4be9eafbe6b0818f17a2f9e1a7776a8b27255316aebc6c39e6414993326d.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="2ddc4be9eafbe6b0818f17a2f9e1a7776a8b27255316aebc6c39e6414993326d.png" title=" He should see a value that is true" width="1876"/>
+                <img src="2ddc4be9eafbe6b0818f17a2f9e1a7776a8b27255316aebc6c39e6414993326d.png" title=" He enters 'Мирослава Ангелова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="a0b154bff5174ff8c9a289421b15f8b22557b20e4f9757b450178a359256f2a7.png" title=" He enters 'Мирослава Ангелова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="352c261886c5887e4478f77e1328a007b8341f292f6bc483118b07f66ffcd123.png" title=" He should see a value that is true" width="1876"/>
+                <img src="352c261886c5887e4478f77e1328a007b8341f292f6bc483118b07f66ffcd123.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="352c261886c5887e4478f77e1328a007b8341f292f6bc483118b07f66ffcd123.png" title=" He should see a value that is equal to: &lt;&quot;Мирослава Ангелова&quot;&gt;" width="1876"/>
+                <img src="352c261886c5887e4478f77e1328a007b8341f292f6bc483118b07f66ffcd123.png" title=" He should see a value that is true" width="1876"/>
+                <img src="cb41c5b24e0842c41612ebccdd3182ca2ffd1f2312ee4a2b5425d9be2465b613.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="cb41c5b24e0842c41612ebccdd3182ca2ffd1f2312ee4a2b5425d9be2465b613.png" title=" He should see a value that is true" width="1876"/>
+                <img src="cb41c5b24e0842c41612ebccdd3182ca2ffd1f2312ee4a2b5425d9be2465b613.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="cb41c5b24e0842c41612ebccdd3182ca2ffd1f2312ee4a2b5425d9be2465b613.png" title=" He should see a value that is true" width="1876"/>
+                <img src="cb41c5b24e0842c41612ebccdd3182ca2ffd1f2312ee4a2b5425d9be2465b613.png" title=" He enters 'Младен Митов' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="e02273abeba101fac60cf2aab6f8b0bb0214cc4555833b2c396d3882e1029f26.png" title=" He enters 'Младен Митов' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="d433963a1488c5c2fde5c03b62a87cda9d50270fe2767b4f53f143c3a356faf8.png" title=" He should see a value that is true" width="1876"/>
+                <img src="d433963a1488c5c2fde5c03b62a87cda9d50270fe2767b4f53f143c3a356faf8.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="d433963a1488c5c2fde5c03b62a87cda9d50270fe2767b4f53f143c3a356faf8.png" title=" He should see a value that is equal to: &lt;&quot;Младен Митов&quot;&gt;" width="1876"/>
+                <img src="d433963a1488c5c2fde5c03b62a87cda9d50270fe2767b4f53f143c3a356faf8.png" title=" He should see a value that is true" width="1876"/>
+                <img src="d433963a1488c5c2fde5c03b62a87cda9d50270fe2767b4f53f143c3a356faf8.png" title=" He should see a value that is true" width="1876"/>
+                <img src="d433963a1488c5c2fde5c03b62a87cda9d50270fe2767b4f53f143c3a356faf8.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="d433963a1488c5c2fde5c03b62a87cda9d50270fe2767b4f53f143c3a356faf8.png" title=" He should see a value that is true" width="1876"/>
+                <img src="d433963a1488c5c2fde5c03b62a87cda9d50270fe2767b4f53f143c3a356faf8.png" title=" He enters 'Мохаммед Масууд' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="afb9a98937326250e7fda307aed7a23153e532538e1cb4542235acaa7bb488b7.png" title=" He enters 'Мохаммед Масууд' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="784d11dce5ab47911a64eb8001c3a970995be5b00747b76793ee1becaa8f4c49.png" title=" He should see a value that is true" width="1876"/>
+                <img src="784d11dce5ab47911a64eb8001c3a970995be5b00747b76793ee1becaa8f4c49.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="784d11dce5ab47911a64eb8001c3a970995be5b00747b76793ee1becaa8f4c49.png" title=" He should see a value that is equal to: &lt;&quot;Мохаммед Масууд&quot;&gt;" width="1876"/>
+                <img src="784d11dce5ab47911a64eb8001c3a970995be5b00747b76793ee1becaa8f4c49.png" title=" He should see a value that is true" width="1876"/>
+                <img src="ee42fa5235b4c56c92be9e0b3366d61790402c489be67b1dfc0b44888cee092e.png" title=" He should see a value that is true" width="1876"/>
+                <img src="ee42fa5235b4c56c92be9e0b3366d61790402c489be67b1dfc0b44888cee092e.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="ee42fa5235b4c56c92be9e0b3366d61790402c489be67b1dfc0b44888cee092e.png" title=" He should see a value that is true" width="1876"/>
+                <img src="ee42fa5235b4c56c92be9e0b3366d61790402c489be67b1dfc0b44888cee092e.png" title=" He enters 'Надежда Вълова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="864105d48992801968a5d99ee4be7d0bcc410f51351984a2a1a78b83ea10e158.png" title=" He enters 'Надежда Вълова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="c3353f6e4bdcaefb0913b0d5e65198d49c83036dfea7fcf09a94ee581a14187e.png" title=" He should see a value that is true" width="1876"/>
+                <img src="c3353f6e4bdcaefb0913b0d5e65198d49c83036dfea7fcf09a94ee581a14187e.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="c3353f6e4bdcaefb0913b0d5e65198d49c83036dfea7fcf09a94ee581a14187e.png" title=" He should see a value that is equal to: &lt;&quot;Надежда Вълова&quot;&gt;" width="1876"/>
+                <img src="c3353f6e4bdcaefb0913b0d5e65198d49c83036dfea7fcf09a94ee581a14187e.png" title=" He should see a value that is true" width="1876"/>
+                <img src="c3353f6e4bdcaefb0913b0d5e65198d49c83036dfea7fcf09a94ee581a14187e.png" title=" He should see a value that is true" width="1876"/>
+                <img src="c3353f6e4bdcaefb0913b0d5e65198d49c83036dfea7fcf09a94ee581a14187e.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="c3353f6e4bdcaefb0913b0d5e65198d49c83036dfea7fcf09a94ee581a14187e.png" title=" He should see a value that is true" width="1876"/>
+                <img src="c3353f6e4bdcaefb0913b0d5e65198d49c83036dfea7fcf09a94ee581a14187e.png" title=" He enters 'Нели Коларова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="2f7e9ddfef0c33d0f0c5c9141a20b8a34a9e3f336243117390303a2b1c053b00.png" title=" He enters 'Нели Коларова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="9b1f117d26084640fa67fa8d0fdd396c02bb275027de06808c198d9aee64cd04.png" title=" He should see a value that is true" width="1876"/>
+                <img src="9b1f117d26084640fa67fa8d0fdd396c02bb275027de06808c198d9aee64cd04.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="9b1f117d26084640fa67fa8d0fdd396c02bb275027de06808c198d9aee64cd04.png" title=" He should see a value that is equal to: &lt;&quot;Нели Коларова&quot;&gt;" width="1876"/>
+                <img src="9b1f117d26084640fa67fa8d0fdd396c02bb275027de06808c198d9aee64cd04.png" title=" He should see a value that is true" width="1876"/>
+                <img src="9b1f117d26084640fa67fa8d0fdd396c02bb275027de06808c198d9aee64cd04.png" title=" He should see a value that is true" width="1876"/>
+                <img src="9b1f117d26084640fa67fa8d0fdd396c02bb275027de06808c198d9aee64cd04.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="9b1f117d26084640fa67fa8d0fdd396c02bb275027de06808c198d9aee64cd04.png" title=" He should see a value that is true" width="1876"/>
+                <img src="9b1f117d26084640fa67fa8d0fdd396c02bb275027de06808c198d9aee64cd04.png" title=" He enters 'Никол Петрова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="84401049a0e8c984409d64ee4b807c93b4a4b97caa15c74b64c6be2df0a82cd7.png" title=" He enters 'Никол Петрова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="b3b5ec108e372c008acf8d5499602f212effbd50dd8c8797504c56d68c1e553f.png" title=" He should see a value that is true" width="1876"/>
+                <img src="b3b5ec108e372c008acf8d5499602f212effbd50dd8c8797504c56d68c1e553f.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="b3b5ec108e372c008acf8d5499602f212effbd50dd8c8797504c56d68c1e553f.png" title=" He should see a value that is equal to: &lt;&quot;Никол Петрова&quot;&gt;" width="1876"/>
+                <img src="b3b5ec108e372c008acf8d5499602f212effbd50dd8c8797504c56d68c1e553f.png" title=" He should see a value that is true" width="1876"/>
+                <img src="25d399440134ca6e5d218fcd2211f96ce19486e6721b0f37ab06e8c49d10ac23.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="25d399440134ca6e5d218fcd2211f96ce19486e6721b0f37ab06e8c49d10ac23.png" title=" He should see a value that is true" width="1876"/>
+                <img src="25d399440134ca6e5d218fcd2211f96ce19486e6721b0f37ab06e8c49d10ac23.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="25d399440134ca6e5d218fcd2211f96ce19486e6721b0f37ab06e8c49d10ac23.png" title=" He should see a value that is true" width="1876"/>
+                <img src="25d399440134ca6e5d218fcd2211f96ce19486e6721b0f37ab06e8c49d10ac23.png" title=" He enters 'Никола Карапетян' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="457528da4892515318e18bccc7b249e56722321ff47aea41d863bc09d30497fd.png" title=" He enters 'Никола Карапетян' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="5c25860f7ee087c5bf8bb3ce812e7baa349c47b229a96de6551295cb35f81804.png" title=" He should see a value that is true" width="1876"/>
+                <img src="5c25860f7ee087c5bf8bb3ce812e7baa349c47b229a96de6551295cb35f81804.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="5c25860f7ee087c5bf8bb3ce812e7baa349c47b229a96de6551295cb35f81804.png" title=" He should see a value that is equal to: &lt;&quot;Никола Карапетян&quot;&gt;" width="1876"/>
+                <img src="5c25860f7ee087c5bf8bb3ce812e7baa349c47b229a96de6551295cb35f81804.png" title=" He should see a value that is true" width="1876"/>
+                <img src="5c25860f7ee087c5bf8bb3ce812e7baa349c47b229a96de6551295cb35f81804.png" title=" He should see a value that is true" width="1876"/>
+                <img src="5c25860f7ee087c5bf8bb3ce812e7baa349c47b229a96de6551295cb35f81804.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="5c25860f7ee087c5bf8bb3ce812e7baa349c47b229a96de6551295cb35f81804.png" title=" He should see a value that is true" width="1876"/>
+                <img src="5c25860f7ee087c5bf8bb3ce812e7baa349c47b229a96de6551295cb35f81804.png" title=" He enters 'Николай Арсенов' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="832ad7a07b3a65d05fedcaab2f77fb3af5378b83ecf546c3894522c73d12a442.png" title=" He enters 'Николай Арсенов' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="88cc2c4e0ab9e20644a7ee084f4c72abe485d386edb1eec8ab64e97b1efd4176.png" title=" He should see a value that is true" width="1876"/>
+                <img src="88cc2c4e0ab9e20644a7ee084f4c72abe485d386edb1eec8ab64e97b1efd4176.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="88cc2c4e0ab9e20644a7ee084f4c72abe485d386edb1eec8ab64e97b1efd4176.png" title=" He should see a value that is equal to: &lt;&quot;Николай Арсенов&quot;&gt;" width="1876"/>
+                <img src="88cc2c4e0ab9e20644a7ee084f4c72abe485d386edb1eec8ab64e97b1efd4176.png" title=" He should see a value that is true" width="1876"/>
+                <img src="3bede80cc80a74867b9f7edebe6d60ae8f833af596ed058f9cbf62b3322199c4.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="3bede80cc80a74867b9f7edebe6d60ae8f833af596ed058f9cbf62b3322199c4.png" title=" He should see a value that is true" width="1876"/>
+                <img src="3bede80cc80a74867b9f7edebe6d60ae8f833af596ed058f9cbf62b3322199c4.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="3bede80cc80a74867b9f7edebe6d60ae8f833af596ed058f9cbf62b3322199c4.png" title=" He should see a value that is true" width="1876"/>
+                <img src="3bede80cc80a74867b9f7edebe6d60ae8f833af596ed058f9cbf62b3322199c4.png" title=" He enters 'Николай Мраценков' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="39300a3aa02d8eed8008ea3d277b1739cc8e920c374c69b564179a9c1dcf81f6.png" title=" He enters 'Николай Мраценков' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="cd7f974c4f2430719fd4401399b196444936221532becc7743fac587d195996c.png" title=" He should see a value that is true" width="1876"/>
+                <img src="cd7f974c4f2430719fd4401399b196444936221532becc7743fac587d195996c.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="cd7f974c4f2430719fd4401399b196444936221532becc7743fac587d195996c.png" title=" He should see a value that is equal to: &lt;&quot;Николай Мраценков&quot;&gt;" width="1876"/>
+                <img src="cd7f974c4f2430719fd4401399b196444936221532becc7743fac587d195996c.png" title=" He should see a value that is true" width="1876"/>
+                <img src="d76d1f52945fe54f2f58b8e28bf5930622f86ba5bc23903ad45a70c61d1bf543.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="d76d1f52945fe54f2f58b8e28bf5930622f86ba5bc23903ad45a70c61d1bf543.png" title=" He should see a value that is true" width="1876"/>
+                <img src="d76d1f52945fe54f2f58b8e28bf5930622f86ba5bc23903ad45a70c61d1bf543.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="d76d1f52945fe54f2f58b8e28bf5930622f86ba5bc23903ad45a70c61d1bf543.png" title=" He should see a value that is true" width="1876"/>
+                <img src="d76d1f52945fe54f2f58b8e28bf5930622f86ba5bc23903ad45a70c61d1bf543.png" title=" He enters 'Пенка Ангелова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="6f38d4da6789d1b2cdaa48ccd18e4f6cd7b96c13143365d1d07983c40ce0b61c.png" title=" He enters 'Пенка Ангелова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="f03f09828a7cc21cefd4dc6396d8878f3c3354fd42353e308ccf740823d59ef0.png" title=" He should see a value that is true" width="1876"/>
+                <img src="f03f09828a7cc21cefd4dc6396d8878f3c3354fd42353e308ccf740823d59ef0.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="f03f09828a7cc21cefd4dc6396d8878f3c3354fd42353e308ccf740823d59ef0.png" title=" He should see a value that is equal to: &lt;&quot;Пенка Ангелова&quot;&gt;" width="1876"/>
+                <img src="f03f09828a7cc21cefd4dc6396d8878f3c3354fd42353e308ccf740823d59ef0.png" title=" He should see a value that is true" width="1876"/>
+                <img src="0e96c11bb2d5d9abbef81a2b1208934a3084739c52df3aa3a6db23b61be6aef3.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="0e96c11bb2d5d9abbef81a2b1208934a3084739c52df3aa3a6db23b61be6aef3.png" title=" He should see a value that is true" width="1876"/>
+                <img src="0e96c11bb2d5d9abbef81a2b1208934a3084739c52df3aa3a6db23b61be6aef3.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="0e96c11bb2d5d9abbef81a2b1208934a3084739c52df3aa3a6db23b61be6aef3.png" title=" He should see a value that is true" width="1876"/>
+                <img src="0e96c11bb2d5d9abbef81a2b1208934a3084739c52df3aa3a6db23b61be6aef3.png" title=" He enters 'Петър Станимиров' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="a195958f714d3be7a9f60f400907265707a1aaef7c1ff88be4ae8ee6d8935868.png" title=" He enters 'Петър Станимиров' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="51540e911222bbd386fa6d62f97f8836a4e3b100f8f7c6021f3fd6a778d54340.png" title=" He should see a value that is true" width="1876"/>
+                <img src="51540e911222bbd386fa6d62f97f8836a4e3b100f8f7c6021f3fd6a778d54340.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="51540e911222bbd386fa6d62f97f8836a4e3b100f8f7c6021f3fd6a778d54340.png" title=" He should see a value that is equal to: &lt;&quot;Петър Станимиров&quot;&gt;" width="1876"/>
+                <img src="51540e911222bbd386fa6d62f97f8836a4e3b100f8f7c6021f3fd6a778d54340.png" title=" He should see a value that is true" width="1876"/>
+                <img src="ac6f933348ca684debd671afcda2125c6d31bfc835068f904f806a9a6c851e20.png" title=" He should see a value that is true" width="1876"/>
+                <img src="ac6f933348ca684debd671afcda2125c6d31bfc835068f904f806a9a6c851e20.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="ac6f933348ca684debd671afcda2125c6d31bfc835068f904f806a9a6c851e20.png" title=" He should see a value that is true" width="1876"/>
+                <img src="ac6f933348ca684debd671afcda2125c6d31bfc835068f904f806a9a6c851e20.png" title=" He enters 'Пламен Нистеров' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="402265036bf01321a953993b7c27f7f910ae7dfdff0fe1eab97916ad6e04ba3b.png" title=" He enters 'Пламен Нистеров' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="7ebc8f2e33f75b81577a62a490e1467c25401d892e3db49ad9e2b727b55145ea.png" title=" He should see a value that is true" width="1876"/>
+                <img src="7ebc8f2e33f75b81577a62a490e1467c25401d892e3db49ad9e2b727b55145ea.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="7ebc8f2e33f75b81577a62a490e1467c25401d892e3db49ad9e2b727b55145ea.png" title=" He should see a value that is equal to: &lt;&quot;Пламен Нистеров&quot;&gt;" width="1876"/>
+                <img src="7ebc8f2e33f75b81577a62a490e1467c25401d892e3db49ad9e2b727b55145ea.png" title=" He should see a value that is true" width="1876"/>
+                <img src="e1ce033c595278fe261c4385da435a9aa3af2668512fde3f7485daf9b1cbe146.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="e1ce033c595278fe261c4385da435a9aa3af2668512fde3f7485daf9b1cbe146.png" title=" He should see a value that is true" width="1876"/>
+                <img src="e1ce033c595278fe261c4385da435a9aa3af2668512fde3f7485daf9b1cbe146.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="e1ce033c595278fe261c4385da435a9aa3af2668512fde3f7485daf9b1cbe146.png" title=" He should see a value that is true" width="1876"/>
+                <img src="e1ce033c595278fe261c4385da435a9aa3af2668512fde3f7485daf9b1cbe146.png" title=" He enters 'Преслава Иванова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="05ac88e1078160a1c895319b9a36772cac0c136aa1cd347d2f6985aab8c52b76.png" title=" He enters 'Преслава Иванова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="3f03317a38ba04df24494651ecc16a0e0e882da8c852c8d3839fe4db50d5f9a2.png" title=" He should see a value that is true" width="1876"/>
+                <img src="3f03317a38ba04df24494651ecc16a0e0e882da8c852c8d3839fe4db50d5f9a2.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="3f03317a38ba04df24494651ecc16a0e0e882da8c852c8d3839fe4db50d5f9a2.png" title=" He should see a value that is equal to: &lt;&quot;Преслава Иванова&quot;&gt;" width="1876"/>
+                <img src="3f03317a38ba04df24494651ecc16a0e0e882da8c852c8d3839fe4db50d5f9a2.png" title=" He should see a value that is true" width="1876"/>
+                <img src="9ad83e00931ec1bc0317dbdcca3aaca4392c4b984f6d281bf4fd7e64c34b8bfc.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="9ad83e00931ec1bc0317dbdcca3aaca4392c4b984f6d281bf4fd7e64c34b8bfc.png" title=" He should see a value that is true" width="1876"/>
+                <img src="9ad83e00931ec1bc0317dbdcca3aaca4392c4b984f6d281bf4fd7e64c34b8bfc.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="9ad83e00931ec1bc0317dbdcca3aaca4392c4b984f6d281bf4fd7e64c34b8bfc.png" title=" He should see a value that is true" width="1876"/>
+                <img src="9ad83e00931ec1bc0317dbdcca3aaca4392c4b984f6d281bf4fd7e64c34b8bfc.png" title=" He enters 'Радослав Делчев' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="481291d6591c619073d0b7540aeaab5c53cbbdb8fcd464ef3723a27ac69ff1a6.png" title=" He enters 'Радослав Делчев' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="a551a3da1cab2f698cd7173132e19f1adc8f36464d1cb692c55237e606384fa0.png" title=" He should see a value that is true" width="1876"/>
+                <img src="a551a3da1cab2f698cd7173132e19f1adc8f36464d1cb692c55237e606384fa0.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="a551a3da1cab2f698cd7173132e19f1adc8f36464d1cb692c55237e606384fa0.png" title=" He should see a value that is equal to: &lt;&quot;Радослав Делчев&quot;&gt;" width="1876"/>
+                <img src="a551a3da1cab2f698cd7173132e19f1adc8f36464d1cb692c55237e606384fa0.png" title=" He should see a value that is true" width="1876"/>
+                <img src="41aa5ff5f6f2d175daac751279c11ad9b17d37da49b18301b87cecb55d221a4a.png" title=" He should see a value that is true" width="1876"/>
+                <img src="41aa5ff5f6f2d175daac751279c11ad9b17d37da49b18301b87cecb55d221a4a.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="41aa5ff5f6f2d175daac751279c11ad9b17d37da49b18301b87cecb55d221a4a.png" title=" He should see a value that is true" width="1876"/>
+                <img src="41aa5ff5f6f2d175daac751279c11ad9b17d37da49b18301b87cecb55d221a4a.png" title=" He enters 'Радослав Коев' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="d021a453ed02214136efc4e70c8914dbc2d47c0dad3945ab61310f809a9fd625.png" title=" He enters 'Радослав Коев' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="d2ee4894ee5552488b44b2e1699b35e2ce3c9194246ecbf2e799b72889a455fe.png" title=" He should see a value that is true" width="1876"/>
+                <img src="d2ee4894ee5552488b44b2e1699b35e2ce3c9194246ecbf2e799b72889a455fe.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="d2ee4894ee5552488b44b2e1699b35e2ce3c9194246ecbf2e799b72889a455fe.png" title=" He should see a value that is equal to: &lt;&quot;Радослав Коев&quot;&gt;" width="1876"/>
+                <img src="d2ee4894ee5552488b44b2e1699b35e2ce3c9194246ecbf2e799b72889a455fe.png" title=" He should see a value that is true" width="1876"/>
+                <img src="d2ee4894ee5552488b44b2e1699b35e2ce3c9194246ecbf2e799b72889a455fe.png" title=" He should see a value that is true" width="1876"/>
+                <img src="d2ee4894ee5552488b44b2e1699b35e2ce3c9194246ecbf2e799b72889a455fe.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="d2ee4894ee5552488b44b2e1699b35e2ce3c9194246ecbf2e799b72889a455fe.png" title=" He should see a value that is true" width="1876"/>
+                <img src="d2ee4894ee5552488b44b2e1699b35e2ce3c9194246ecbf2e799b72889a455fe.png" title=" He enters 'Ралица Николова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="2da227bd9230ab2434bed2fecf8bfb14f05eb601040642fdd83e8445d9305630.png" title=" He enters 'Ралица Николова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="1a826df2b2aeecb3fc8b2e7ea74fa937d442b005c8c678bf2515c0eca825f97a.png" title=" He should see a value that is true" width="1876"/>
+                <img src="1a826df2b2aeecb3fc8b2e7ea74fa937d442b005c8c678bf2515c0eca825f97a.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="1a826df2b2aeecb3fc8b2e7ea74fa937d442b005c8c678bf2515c0eca825f97a.png" title=" He should see a value that is equal to: &lt;&quot;Ралица Николова&quot;&gt;" width="1876"/>
+                <img src="1a826df2b2aeecb3fc8b2e7ea74fa937d442b005c8c678bf2515c0eca825f97a.png" title=" He should see a value that is true" width="1876"/>
+                <img src="1a826df2b2aeecb3fc8b2e7ea74fa937d442b005c8c678bf2515c0eca825f97a.png" title=" He should see a value that is true" width="1876"/>
+                <img src="1a826df2b2aeecb3fc8b2e7ea74fa937d442b005c8c678bf2515c0eca825f97a.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="1a826df2b2aeecb3fc8b2e7ea74fa937d442b005c8c678bf2515c0eca825f97a.png" title=" He should see a value that is true" width="1876"/>
+                <img src="1a826df2b2aeecb3fc8b2e7ea74fa937d442b005c8c678bf2515c0eca825f97a.png" title=" He enters 'Ренета Антова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="ab85ae5eae83338a5f88e4d4b98d046a9d3521f1373e57cf9a4258872a5fbdcd.png" title=" He enters 'Ренета Антова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="c57f0e089f9a0a616984a603e88712392c436a3bcb41a06d632d640d4db5ab8f.png" title=" He should see a value that is true" width="1876"/>
+                <img src="c57f0e089f9a0a616984a603e88712392c436a3bcb41a06d632d640d4db5ab8f.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="c57f0e089f9a0a616984a603e88712392c436a3bcb41a06d632d640d4db5ab8f.png" title=" He should see a value that is equal to: &lt;&quot;Ренета Антова&quot;&gt;" width="1876"/>
+                <img src="c57f0e089f9a0a616984a603e88712392c436a3bcb41a06d632d640d4db5ab8f.png" title=" He should see a value that is true" width="1876"/>
+                <img src="5a6467699fdbd52223ed1c4bfe649e065cf3ef74370994ac9247cfc966b3cc08.png" title=" He should see a value that is true" width="1876"/>
+                <img src="5a6467699fdbd52223ed1c4bfe649e065cf3ef74370994ac9247cfc966b3cc08.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="5a6467699fdbd52223ed1c4bfe649e065cf3ef74370994ac9247cfc966b3cc08.png" title=" He should see a value that is true" width="1876"/>
+                <img src="5a6467699fdbd52223ed1c4bfe649e065cf3ef74370994ac9247cfc966b3cc08.png" title=" He enters 'Рим Ауад' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="c421a499e5a38da477db6bb16a811f328f52e68e28bab1fd8d2c7cc4f2abd42b.png" title=" He enters 'Рим Ауад' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="a677d52d6d835ab8fb2e194d56b5c811bb538eeb86e464b231bce41dd907a508.png" title=" He should see a value that is true" width="1876"/>
+                <img src="a677d52d6d835ab8fb2e194d56b5c811bb538eeb86e464b231bce41dd907a508.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="a677d52d6d835ab8fb2e194d56b5c811bb538eeb86e464b231bce41dd907a508.png" title=" He should see a value that is equal to: &lt;&quot;Рим Ауад&quot;&gt;" width="1876"/>
+                <img src="a677d52d6d835ab8fb2e194d56b5c811bb538eeb86e464b231bce41dd907a508.png" title=" He should see a value that is true" width="1876"/>
+                <img src="0ddb53370c8104eb401829951262e2d1b65fbc447a6941ba2a82ad79d6ca614f.png" title=" He should see a value that is true" width="1876"/>
+                <img src="0ddb53370c8104eb401829951262e2d1b65fbc447a6941ba2a82ad79d6ca614f.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="0ddb53370c8104eb401829951262e2d1b65fbc447a6941ba2a82ad79d6ca614f.png" title=" He should see a value that is true" width="1876"/>
+                <img src="0ddb53370c8104eb401829951262e2d1b65fbc447a6941ba2a82ad79d6ca614f.png" title=" He enters 'Румяна Стоилкова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="0705e0958d3cf7efe1b58c415557e08ea265485cc800ccf3b8bf38e08f56a3cd.png" title=" He enters 'Румяна Стоилкова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="65a93ffa9f458c65d407b98322b65c8787181b48173c4e03b733295730958692.png" title=" He should see a value that is true" width="1876"/>
+                <img src="65a93ffa9f458c65d407b98322b65c8787181b48173c4e03b733295730958692.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="65a93ffa9f458c65d407b98322b65c8787181b48173c4e03b733295730958692.png" title=" He should see a value that is equal to: &lt;&quot;Румяна Стоилкова&quot;&gt;" width="1876"/>
+                <img src="65a93ffa9f458c65d407b98322b65c8787181b48173c4e03b733295730958692.png" title=" He should see a value that is true" width="1876"/>
+                <img src="65a93ffa9f458c65d407b98322b65c8787181b48173c4e03b733295730958692.png" title=" He should see a value that is true" width="1876"/>
+                <img src="65a93ffa9f458c65d407b98322b65c8787181b48173c4e03b733295730958692.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="65a93ffa9f458c65d407b98322b65c8787181b48173c4e03b733295730958692.png" title=" He should see a value that is true" width="1876"/>
+                <img src="65a93ffa9f458c65d407b98322b65c8787181b48173c4e03b733295730958692.png" title=" He enters 'Светослав Великов' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="9b999835d9b912ea6faa82001cad783869467f5a2c45351255c2917057fda92b.png" title=" He enters 'Светослав Великов' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="30c3e1c0c157cf3c78fe69a297fcbd45945abfbbb644041883683b0503945906.png" title=" He should see a value that is true" width="1876"/>
+                <img src="30c3e1c0c157cf3c78fe69a297fcbd45945abfbbb644041883683b0503945906.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="30c3e1c0c157cf3c78fe69a297fcbd45945abfbbb644041883683b0503945906.png" title=" He should see a value that is equal to: &lt;&quot;Светослав Великов&quot;&gt;" width="1876"/>
+                <img src="30c3e1c0c157cf3c78fe69a297fcbd45945abfbbb644041883683b0503945906.png" title=" He should see a value that is true" width="1876"/>
+                <img src="30c3e1c0c157cf3c78fe69a297fcbd45945abfbbb644041883683b0503945906.png" title=" He should see a value that is true" width="1876"/>
+                <img src="30c3e1c0c157cf3c78fe69a297fcbd45945abfbbb644041883683b0503945906.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="30c3e1c0c157cf3c78fe69a297fcbd45945abfbbb644041883683b0503945906.png" title=" He should see a value that is true" width="1876"/>
+                <img src="30c3e1c0c157cf3c78fe69a297fcbd45945abfbbb644041883683b0503945906.png" title=" He enters 'Сибел Кавлакова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="df281d8a9c5a0ef39e2e61db149204784f76c80a90cb10d7d5f4001b685b4ab4.png" title=" He enters 'Сибел Кавлакова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="697ee99dbeac5421dbfc1668a4be532e905b70ce779b53bf7e4d293c83f5df62.png" title=" He should see a value that is true" width="1876"/>
+                <img src="697ee99dbeac5421dbfc1668a4be532e905b70ce779b53bf7e4d293c83f5df62.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="697ee99dbeac5421dbfc1668a4be532e905b70ce779b53bf7e4d293c83f5df62.png" title=" He should see a value that is equal to: &lt;&quot;Сибел Кавлакова&quot;&gt;" width="1876"/>
+                <img src="697ee99dbeac5421dbfc1668a4be532e905b70ce779b53bf7e4d293c83f5df62.png" title=" He should see a value that is true" width="1876"/>
+                <img src="7e779f709874b81f75a9b38eb1a0544415e84332258d103b763a8149e3750d20.png" title=" He should see a value that is true" width="1876"/>
+                <img src="7e779f709874b81f75a9b38eb1a0544415e84332258d103b763a8149e3750d20.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="7e779f709874b81f75a9b38eb1a0544415e84332258d103b763a8149e3750d20.png" title=" He should see a value that is true" width="1876"/>
+                <img src="7e779f709874b81f75a9b38eb1a0544415e84332258d103b763a8149e3750d20.png" title=" He enters 'Силвия Ангелинова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="e58cb237e38671122d1ad1b1513868c87d9ca753b7fc10d91758153f1b8c64a4.png" title=" He enters 'Силвия Ангелинова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="b2c4579c58168c5567b557c59fc164d6bfada6e26a1f36959f55a47be07c1194.png" title=" He should see a value that is true" width="1876"/>
+                <img src="b2c4579c58168c5567b557c59fc164d6bfada6e26a1f36959f55a47be07c1194.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="b2c4579c58168c5567b557c59fc164d6bfada6e26a1f36959f55a47be07c1194.png" title=" He should see a value that is equal to: &lt;&quot;Силвия Ангелинова&quot;&gt;" width="1876"/>
+                <img src="b2c4579c58168c5567b557c59fc164d6bfada6e26a1f36959f55a47be07c1194.png" title=" He should see a value that is true" width="1876"/>
+                <img src="397576e1c48c0d2508613fd511ed681aee2a7aa7a277a55d6f9509e59bc6f84a.png" title=" He should see a value that is true" width="1876"/>
+                <img src="397576e1c48c0d2508613fd511ed681aee2a7aa7a277a55d6f9509e59bc6f84a.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="397576e1c48c0d2508613fd511ed681aee2a7aa7a277a55d6f9509e59bc6f84a.png" title=" He should see a value that is true" width="1876"/>
+                <img src="397576e1c48c0d2508613fd511ed681aee2a7aa7a277a55d6f9509e59bc6f84a.png" title=" He enters 'Симона Войска' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="a6e8877c28ed8af9255ad0ab133e51a3950be7f3c42789dc179b8eaf87a905b1.png" title=" He enters 'Симона Войска' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="43bddf840965095f4132cdbeb46669b10ca24a88714ee8805571c6cd22a719b1.png" title=" He should see a value that is true" width="1876"/>
+                <img src="43bddf840965095f4132cdbeb46669b10ca24a88714ee8805571c6cd22a719b1.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="43bddf840965095f4132cdbeb46669b10ca24a88714ee8805571c6cd22a719b1.png" title=" He should see a value that is equal to: &lt;&quot;Симона Войска&quot;&gt;" width="1876"/>
+                <img src="43bddf840965095f4132cdbeb46669b10ca24a88714ee8805571c6cd22a719b1.png" title=" He should see a value that is true" width="1876"/>
+                <img src="89a4ba6c17b4242a6a06200088ed9703eaa3e182447b433162e5a2b828a5d866.png" title=" He should see a value that is true (completed)" width="1876"/>
+                <img src="89a4ba6c17b4242a6a06200088ed9703eaa3e182447b433162e5a2b828a5d866.png" title=" He should see a value that is true" width="1876"/>
+                <img src="89a4ba6c17b4242a6a06200088ed9703eaa3e182447b433162e5a2b828a5d866.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="89a4ba6c17b4242a6a06200088ed9703eaa3e182447b433162e5a2b828a5d866.png" title=" He should see a value that is true" width="1876"/>
+                <img src="89a4ba6c17b4242a6a06200088ed9703eaa3e182447b433162e5a2b828a5d866.png" title=" He enters 'Симона Григорова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="8b0afa1b7a03f454c51e6fd224dd458d0e91f37d6227b51a962844174c8e226c.png" title=" He enters 'Симона Григорова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="77695e56dd92bc06cd6efecf0e5217489d786668a34422b1d6f8f15ba56df400.png" title=" He should see a value that is true" width="1876"/>
+                <img src="77695e56dd92bc06cd6efecf0e5217489d786668a34422b1d6f8f15ba56df400.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="77695e56dd92bc06cd6efecf0e5217489d786668a34422b1d6f8f15ba56df400.png" title=" He should see a value that is equal to: &lt;&quot;Симона Григорова&quot;&gt;" width="1876"/>
+                <img src="77695e56dd92bc06cd6efecf0e5217489d786668a34422b1d6f8f15ba56df400.png" title=" He should see a value that is true" width="1876"/>
+                <img src="8c11ef91ceb83125bc2b9aab4d0c229525d2f0c86821ba3386175dd8e4c3a5ae.png" title=" He should see a value that is true" width="1876"/>
+                <img src="8c11ef91ceb83125bc2b9aab4d0c229525d2f0c86821ba3386175dd8e4c3a5ae.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="8c11ef91ceb83125bc2b9aab4d0c229525d2f0c86821ba3386175dd8e4c3a5ae.png" title=" He should see a value that is true" width="1876"/>
+                <img src="8c11ef91ceb83125bc2b9aab4d0c229525d2f0c86821ba3386175dd8e4c3a5ae.png" title=" He enters 'Соня Илиева' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="df0f08323814b090119fc18a03df000ef3ca7b2fa693d2bbb3dd1d6d59b49128.png" title=" He enters 'Соня Илиева' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="e97636766980e06348dae2fac2cfcb18817a81ff1a790641576a4f31312a301b.png" title=" He should see a value that is true" width="1876"/>
+                <img src="e97636766980e06348dae2fac2cfcb18817a81ff1a790641576a4f31312a301b.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="e97636766980e06348dae2fac2cfcb18817a81ff1a790641576a4f31312a301b.png" title=" He should see a value that is equal to: &lt;&quot;Соня Илиева&quot;&gt;" width="1876"/>
+                <img src="e97636766980e06348dae2fac2cfcb18817a81ff1a790641576a4f31312a301b.png" title=" He should see a value that is true" width="1876"/>
+                <img src="e97636766980e06348dae2fac2cfcb18817a81ff1a790641576a4f31312a301b.png" title=" He should see a value that is true" width="1876"/>
+                <img src="e97636766980e06348dae2fac2cfcb18817a81ff1a790641576a4f31312a301b.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="e97636766980e06348dae2fac2cfcb18817a81ff1a790641576a4f31312a301b.png" title=" He should see a value that is true" width="1876"/>
+                <img src="e97636766980e06348dae2fac2cfcb18817a81ff1a790641576a4f31312a301b.png" title=" He enters 'Стелияна Василева' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="43f63ada07d9fc47c83933b0fb96cb79a0bf8069d5ee6552c4fa8c0e593ee437.png" title=" He enters 'Стелияна Василева' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="29f37ff14c883bd6cb7b10ec8e9fa7e31ba7d4668ab65059d83da23a857d7659.png" title=" He should see a value that is true" width="1876"/>
+                <img src="29f37ff14c883bd6cb7b10ec8e9fa7e31ba7d4668ab65059d83da23a857d7659.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="29f37ff14c883bd6cb7b10ec8e9fa7e31ba7d4668ab65059d83da23a857d7659.png" title=" He should see a value that is equal to: &lt;&quot;Стелияна Василева&quot;&gt;" width="1876"/>
+                <img src="29f37ff14c883bd6cb7b10ec8e9fa7e31ba7d4668ab65059d83da23a857d7659.png" title=" He should see a value that is true" width="1876"/>
+                <img src="29f37ff14c883bd6cb7b10ec8e9fa7e31ba7d4668ab65059d83da23a857d7659.png" title=" He should see a value that is true" width="1876"/>
+                <img src="29f37ff14c883bd6cb7b10ec8e9fa7e31ba7d4668ab65059d83da23a857d7659.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="29f37ff14c883bd6cb7b10ec8e9fa7e31ba7d4668ab65059d83da23a857d7659.png" title=" He should see a value that is true" width="1876"/>
+                <img src="29f37ff14c883bd6cb7b10ec8e9fa7e31ba7d4668ab65059d83da23a857d7659.png" title=" He enters 'Стефан Пендов' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="e1a605c7fa0153d95cd53fc239bcaaee5111ae1de1afca3295ec539cea50387e.png" title=" He enters 'Стефан Пендов' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="91183b0cda8e14be92e30da938284f24eb66a187090d7cd293fcbb1942e5d71f.png" title=" He should see a value that is true" width="1876"/>
+                <img src="91183b0cda8e14be92e30da938284f24eb66a187090d7cd293fcbb1942e5d71f.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="91183b0cda8e14be92e30da938284f24eb66a187090d7cd293fcbb1942e5d71f.png" title=" He should see a value that is equal to: &lt;&quot;Стефан Пендов&quot;&gt;" width="1876"/>
+                <img src="91183b0cda8e14be92e30da938284f24eb66a187090d7cd293fcbb1942e5d71f.png" title=" He should see a value that is true" width="1876"/>
+                <img src="b71f923f3b24cafd36046c9514699221a319ae71241e4244a9a1a792cd312e02.png" title=" He should see a value that is true" width="1876"/>
+                <img src="b71f923f3b24cafd36046c9514699221a319ae71241e4244a9a1a792cd312e02.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="b71f923f3b24cafd36046c9514699221a319ae71241e4244a9a1a792cd312e02.png" title=" He should see a value that is true" width="1876"/>
+                <img src="b71f923f3b24cafd36046c9514699221a319ae71241e4244a9a1a792cd312e02.png" title=" He enters 'Стоян Пушков' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="e1566c501e63501745f45ad0e397fe43fb88b5c0f12cbed44bc78e30d17c8af8.png" title=" He enters 'Стоян Пушков' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="92d9f0ee63b6d7f57ba58748334219a3daf8ddc2ceb6eaf3ccca34a3c611db52.png" title=" He should see a value that is true" width="1876"/>
+                <img src="92d9f0ee63b6d7f57ba58748334219a3daf8ddc2ceb6eaf3ccca34a3c611db52.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="92d9f0ee63b6d7f57ba58748334219a3daf8ddc2ceb6eaf3ccca34a3c611db52.png" title=" He should see a value that is equal to: &lt;&quot;Стоян Пушков&quot;&gt;" width="1876"/>
+                <img src="92d9f0ee63b6d7f57ba58748334219a3daf8ddc2ceb6eaf3ccca34a3c611db52.png" title=" He should see a value that is true" width="1876"/>
+                <img src="92d9f0ee63b6d7f57ba58748334219a3daf8ddc2ceb6eaf3ccca34a3c611db52.png" title=" He should see a value that is true" width="1876"/>
+                <img src="92d9f0ee63b6d7f57ba58748334219a3daf8ddc2ceb6eaf3ccca34a3c611db52.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="92d9f0ee63b6d7f57ba58748334219a3daf8ddc2ceb6eaf3ccca34a3c611db52.png" title=" He should see a value that is true" width="1876"/>
+                <img src="92d9f0ee63b6d7f57ba58748334219a3daf8ddc2ceb6eaf3ccca34a3c611db52.png" title=" He enters 'Таня Дамянова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="e8cde4b5b1bd01fd329e2cf959fb834cf8a94c861e37c2a01ccc992f643925b3.png" title=" He enters 'Таня Дамянова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="fad53fc5507446ede639aeb4f5101bd2b2c229378574eb90fc2ed2ec6cab84ee.png" title=" He should see a value that is true" width="1876"/>
+                <img src="fad53fc5507446ede639aeb4f5101bd2b2c229378574eb90fc2ed2ec6cab84ee.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="fad53fc5507446ede639aeb4f5101bd2b2c229378574eb90fc2ed2ec6cab84ee.png" title=" He should see a value that is equal to: &lt;&quot;Таня Дамянова&quot;&gt;" width="1876"/>
+                <img src="fad53fc5507446ede639aeb4f5101bd2b2c229378574eb90fc2ed2ec6cab84ee.png" title=" He should see a value that is true" width="1876"/>
+                <img src="a181ca2a8bf6b6198ade3b99ef53eed0e7374bb387730c0f8a403f1555186fb3.png" title=" He should see a value that is true" width="1876"/>
+                <img src="a181ca2a8bf6b6198ade3b99ef53eed0e7374bb387730c0f8a403f1555186fb3.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="a181ca2a8bf6b6198ade3b99ef53eed0e7374bb387730c0f8a403f1555186fb3.png" title=" He should see a value that is true" width="1876"/>
+                <img src="a181ca2a8bf6b6198ade3b99ef53eed0e7374bb387730c0f8a403f1555186fb3.png" title=" He enters 'Таня Петрова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="41e77dc69f7d0e8f6c5b0e888f98df9a424ab8e5472a450aab16c83ed880e099.png" title=" He enters 'Таня Петрова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="e9528b68e451fca28bfe0cf58631d38fa7accccbc90df7481fb794a7b95fa6bb.png" title=" He should see a value that is true" width="1876"/>
+                <img src="e9528b68e451fca28bfe0cf58631d38fa7accccbc90df7481fb794a7b95fa6bb.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="e9528b68e451fca28bfe0cf58631d38fa7accccbc90df7481fb794a7b95fa6bb.png" title=" He should see a value that is equal to: &lt;&quot;Таня Петрова&quot;&gt;" width="1876"/>
+                <img src="e9528b68e451fca28bfe0cf58631d38fa7accccbc90df7481fb794a7b95fa6bb.png" title=" He should see a value that is true" width="1876"/>
+                <img src="d4b5ad8704cb0aa182c0d7406d43ecb99581c18f8160f9230a989bbd567f67db.png" title=" He should see a value that is true" width="1876"/>
+                <img src="d4b5ad8704cb0aa182c0d7406d43ecb99581c18f8160f9230a989bbd567f67db.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="d4b5ad8704cb0aa182c0d7406d43ecb99581c18f8160f9230a989bbd567f67db.png" title=" He should see a value that is true" width="1876"/>
+                <img src="d4b5ad8704cb0aa182c0d7406d43ecb99581c18f8160f9230a989bbd567f67db.png" title=" He enters 'Теодор Динев' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="b7c46214af8efdfd2df1b9381101b7acb8dbce4bf8bfaa24b95513ebd2d21660.png" title=" He enters 'Теодор Динев' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="75b52b91a7c98603379bcf6257eff54d287c449170fdf9c31ae834fe47091034.png" title=" He should see a value that is true" width="1876"/>
+                <img src="75b52b91a7c98603379bcf6257eff54d287c449170fdf9c31ae834fe47091034.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="75b52b91a7c98603379bcf6257eff54d287c449170fdf9c31ae834fe47091034.png" title=" He should see a value that is equal to: &lt;&quot;Теодор Динев&quot;&gt;" width="1876"/>
+                <img src="75b52b91a7c98603379bcf6257eff54d287c449170fdf9c31ae834fe47091034.png" title=" He should see a value that is true" width="1876"/>
+                <img src="75b52b91a7c98603379bcf6257eff54d287c449170fdf9c31ae834fe47091034.png" title=" He should see a value that is true" width="1876"/>
+                <img src="75b52b91a7c98603379bcf6257eff54d287c449170fdf9c31ae834fe47091034.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="75b52b91a7c98603379bcf6257eff54d287c449170fdf9c31ae834fe47091034.png" title=" He should see a value that is true" width="1876"/>
+                <img src="75b52b91a7c98603379bcf6257eff54d287c449170fdf9c31ae834fe47091034.png" title=" He enters 'Фани Стойова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="9b8a462718cfbc00f816640d7d2e1844e8bb48dee36b5c917735f1ddb84d964f.png" title=" He enters 'Фани Стойова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="69b77fec442c66b0286b5d600a078a4ca2ca338543d1c5d3dfc98db127f33a23.png" title=" He should see a value that is true" width="1876"/>
+                <img src="69b77fec442c66b0286b5d600a078a4ca2ca338543d1c5d3dfc98db127f33a23.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="69b77fec442c66b0286b5d600a078a4ca2ca338543d1c5d3dfc98db127f33a23.png" title=" He should see a value that is equal to: &lt;&quot;Фани Стойова&quot;&gt;" width="1876"/>
+                <img src="cdcbdf796432c4377736578b8032c596de0d2a93f859c4b1f0ec3e70bfffacf3.png" title=" He should see a value that is equal to: &lt;&quot;Фани Стойова&quot;&gt; (completed)" width="1876"/>
+                <img src="cdcbdf796432c4377736578b8032c596de0d2a93f859c4b1f0ec3e70bfffacf3.png" title=" He should see a value that is true" width="1876"/>
+                <img src="cdcbdf796432c4377736578b8032c596de0d2a93f859c4b1f0ec3e70bfffacf3.png" title=" He should see a value that is true" width="1876"/>
+                <img src="cdcbdf796432c4377736578b8032c596de0d2a93f859c4b1f0ec3e70bfffacf3.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="cdcbdf796432c4377736578b8032c596de0d2a93f859c4b1f0ec3e70bfffacf3.png" title=" He should see a value that is true" width="1876"/>
+                <img src="cdcbdf796432c4377736578b8032c596de0d2a93f859c4b1f0ec3e70bfffacf3.png" title=" He enters 'Филип Стоев' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="5b3a572986b3ea923d5232f610d7120df001ae416aad6e0e21bcf86fa54e750d.png" title=" He enters 'Филип Стоев' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="f6a33dac5963e809d7a8f95ccc989e443611164b98235842566c2124a1b6f5cc.png" title=" He should see a value that is true" width="1876"/>
+                <img src="f6a33dac5963e809d7a8f95ccc989e443611164b98235842566c2124a1b6f5cc.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="436f73650547e8925f4ee81a2e3b5e18a6895cd97f8a0c4963ac378dd4159020.png" title=" He should see a value that is equal to: &lt;1&gt; (completed)" width="1876"/>
+                <img src="436f73650547e8925f4ee81a2e3b5e18a6895cd97f8a0c4963ac378dd4159020.png" title=" He should see a value that is equal to: &lt;&quot;Филип Стоев&quot;&gt;" width="1876"/>
+                <img src="436f73650547e8925f4ee81a2e3b5e18a6895cd97f8a0c4963ac378dd4159020.png" title=" He should see a value that is true" width="1876"/>
+                <img src="436f73650547e8925f4ee81a2e3b5e18a6895cd97f8a0c4963ac378dd4159020.png" title=" He should see a value that is true" width="1876"/>
+                <img src="436f73650547e8925f4ee81a2e3b5e18a6895cd97f8a0c4963ac378dd4159020.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="436f73650547e8925f4ee81a2e3b5e18a6895cd97f8a0c4963ac378dd4159020.png" title=" He should see a value that is true" width="1876"/>
+                <img src="436f73650547e8925f4ee81a2e3b5e18a6895cd97f8a0c4963ac378dd4159020.png" title=" He enters 'Християна Гъркова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="763c944efeb4cf8be03a52cff6a691ac90871d9c2511224eae9bf34bf2832dd5.png" title=" He enters 'Християна Гъркова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="c314c4beece56ff599b4fef8486674e035f97aa90bf269619523657b4e6edf26.png" title=" He should see a value that is true" width="1876"/>
+                <img src="c314c4beece56ff599b4fef8486674e035f97aa90bf269619523657b4e6edf26.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="c314c4beece56ff599b4fef8486674e035f97aa90bf269619523657b4e6edf26.png" title=" He should see a value that is equal to: &lt;&quot;Християна Гъркова&quot;&gt;" width="1876"/>
+                <img src="c314c4beece56ff599b4fef8486674e035f97aa90bf269619523657b4e6edf26.png" title=" He should see a value that is true" width="1876"/>
+                <img src="c314c4beece56ff599b4fef8486674e035f97aa90bf269619523657b4e6edf26.png" title=" He should see a value that is true" width="1876"/>
+                <img src="c314c4beece56ff599b4fef8486674e035f97aa90bf269619523657b4e6edf26.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="c314c4beece56ff599b4fef8486674e035f97aa90bf269619523657b4e6edf26.png" title=" He should see a value that is true" width="1876"/>
+                <img src="c314c4beece56ff599b4fef8486674e035f97aa90bf269619523657b4e6edf26.png" title=" He enters 'Цветелин Соколов' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="80a2d18ca89926664d21d5152929320ab8a0001a594cbcde9de56f7b7d28ff0c.png" title=" He enters 'Цветелин Соколов' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="a38d33ca30092957e4b079c3bc09738ba74dc3ac32c78b75d5f0ce31fb94acfe.png" title=" He should see a value that is true" width="1876"/>
+                <img src="a38d33ca30092957e4b079c3bc09738ba74dc3ac32c78b75d5f0ce31fb94acfe.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="a38d33ca30092957e4b079c3bc09738ba74dc3ac32c78b75d5f0ce31fb94acfe.png" title=" He should see a value that is equal to: &lt;&quot;Цветелин Соколов&quot;&gt;" width="1876"/>
+                <img src="a38d33ca30092957e4b079c3bc09738ba74dc3ac32c78b75d5f0ce31fb94acfe.png" title=" He should see a value that is true" width="1876"/>
+                <img src="bcb4a5d8a6663b33029da89751ff3f184287cee7220fa5d2327780cadbce920b.png" title=" He should see a value that is true" width="1876"/>
+                <img src="bcb4a5d8a6663b33029da89751ff3f184287cee7220fa5d2327780cadbce920b.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="bcb4a5d8a6663b33029da89751ff3f184287cee7220fa5d2327780cadbce920b.png" title=" He should see a value that is true" width="1876"/>
+                <img src="bcb4a5d8a6663b33029da89751ff3f184287cee7220fa5d2327780cadbce920b.png" title=" He enters 'Юлиана Манолова' into YavlenaHomePage.searchBox" width="1876"/>
+                <img src="695c8ee57df453aceedc64a45acf88236d98a76a23744114dbae5de3b5d68939.png" title=" He enters 'Юлиана Манолова' into YavlenaHomePage.searchBox (completed)" width="1876"/>
+                <img src="486137491caab6f82bf056848f013712ec399f9a2cc6fff3c86c1b16ecdce58d.png" title=" He should see a value that is true" width="1876"/>
+                <img src="486137491caab6f82bf056848f013712ec399f9a2cc6fff3c86c1b16ecdce58d.png" title=" He should see a value that is equal to: &lt;1&gt;" width="1876"/>
+                <img src="486137491caab6f82bf056848f013712ec399f9a2cc6fff3c86c1b16ecdce58d.png" title=" He should see a value that is equal to: &lt;&quot;Юлиана Манолова&quot;&gt;" width="1876"/>
+                <img src="486137491caab6f82bf056848f013712ec399f9a2cc6fff3c86c1b16ecdce58d.png" title=" He should see a value that is true" width="1876"/>
+                <img src="486137491caab6f82bf056848f013712ec399f9a2cc6fff3c86c1b16ecdce58d.png" title=" He should see a value that is true" width="1876"/>
+                <img src="486137491caab6f82bf056848f013712ec399f9a2cc6fff3c86c1b16ecdce58d.png" title=" He should see a value that is greater than or equal to: &lt;1&gt;" width="1876"/>
+                <img src="486137491caab6f82bf056848f013712ec399f9a2cc6fff3c86c1b16ecdce58d.png" title=" He should see a value that is true" width="1876"/>
+                <img src="486137491caab6f82bf056848f013712ec399f9a2cc6fff3c86c1b16ecdce58d.png" title=" When He searches every broker in the system (completed): <span class='success-color'>SUCCESS</span>" width="1876"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.6.21</span>
+</div>
+</body>
+</html>
