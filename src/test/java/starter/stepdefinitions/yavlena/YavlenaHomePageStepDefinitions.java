@@ -69,6 +69,11 @@ public class YavlenaHomePageStepDefinitions {
         });
     }
 
+    @Then("{actor} is able to complete the task")
+    public void actorIsAbleToCompleteTheTask(){
+        // ignored since all the testing and assertion is done in actorSearchesAllTheBrokersOneByOne
+    }
+
     @Then("{actor} is prompted with a list of all the available brokers")
     public void actorCanSeeAllTheBrokers(Actor actor) {
         actor.wasAbleTo(

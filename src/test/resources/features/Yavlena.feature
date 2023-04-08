@@ -22,4 +22,5 @@ Feature: Yavlena Broker List
   @PositivePath @Automated
   Scenario: As a user of Yavlena, Brad wants to search all the brokers in the system
     Given Brad is a user of Yavlena services
-    When  He searches every broker in the system
+    And   He searches every broker in the system
+    Then  He is able to complete the task
