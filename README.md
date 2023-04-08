@@ -1,6 +1,11 @@
 ### QAA Assignment
 #### Alixhan Basha
 
+The project should work out of the box, but in case it does not I have a vide revording of all test cases running, and I have included the "target" folder where the reports are based.
+
+This project has been developed in a Linux ( Fedora 37 Workspace Edition ) environment, and with IntelliJ IDEA. 
+For any questions, please write me an email at bashaalixhan@gmail.com
+
 ## 1. Bugaboo
 
 ### Workflow
