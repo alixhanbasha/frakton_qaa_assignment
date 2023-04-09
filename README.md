@@ -12,8 +12,8 @@ For any questions, please write me an email at bashaalixhan@gmail.com
 Started working at 09:30 PM Friday, ended in around 03:15 AM Saturday
 - 45 mins to do a thorough manual black box testing session
 - 30 minutes writing what I thought were the most important tests
-- 1 hour automating
-- Spent around 3 hours trying to find a workaround to captcha and un-interactable elements
+- 2 hour automating
+- Spent around 2 hours trying to find a workaround to captcha and un-interactable elements
 
 ### Explanation
 - Did black box testing to understand the system
